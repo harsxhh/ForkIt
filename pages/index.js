@@ -247,7 +247,7 @@ const Index = () => {
                 <div className="content">
                   <h4>Check Nutrients</h4>
                   <p>How much macros does your food have? </p>
-                  <Link href="/shop-grid">
+                  <Link href="/search?category='Beverage'">
                     <a className="theme-btn style-two">
                       Check <i className="fas fa-angle-double-right" />
                     </a>

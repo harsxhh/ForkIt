@@ -28,7 +28,7 @@ function RecipeoftheDay() {
 
     }, []);
     return (
-        <section className="what-we-provide-two rel z-1 pt-130 rpt-100 pb-115 rpb-55">
+        <section className="what-we-provide-two rel z-1 pt-60 rpt-100 pb-115 rpb-55">
         <div className="container">
           <div className="section-title text-center mb-60">
             <span className="sub-title mb-20">Recipe of the Day</span>

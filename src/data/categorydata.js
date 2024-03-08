@@ -4,7 +4,7 @@ export const categorydata=[
         url:"assets/images/category/icon1.png"
     },
     {
-        title:"Vegetables",
+        title:"Vegetable",
         url:"assets/images/category/icon2.png"
     },
     {
@@ -16,7 +16,7 @@ export const categorydata=[
         url:"assets/images/category/icon4.png"
     },
     {
-        title:"Fish and Meat",
+        title:"Fish",
         url:"assets/images/category/icon5.png"
     }
 ];
