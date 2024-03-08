@@ -38,15 +38,7 @@ const MobileMenu = () => {
           <span className="fas fa-chevron-down" />
         </div>
       </li>
-      <li className="dropdown">
-        <a href="#">blog</a>
-        <ul style={activeLi("blog")}>
-          <Blog />
-        </ul>
-        <div className="dropdown-btn" onClick={() => activeMenuSet("blog")}>
-          <span className="fas fa-chevron-down" />
-        </div>
-      </li>
+      <Blog />
       <li className="dropdown">
         <a href="#">shop</a>
         <ul style={activeLi("shop")}>

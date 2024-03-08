@@ -108,7 +108,7 @@ const BlogDetails = () => {
                     </Link>
                   </div>
                 </div>
-                <div className="next-prev-post mb-55">
+                {/* <div className="next-prev-post mb-55">
                   <div className="prev-post wow fadeInLeft delay-0-2s">
                     <div className="image">
                       <img src="assets/images/news/prev-post.jpg" alt="News" />
@@ -142,9 +142,9 @@ const BlogDetails = () => {
                       <span className="name">By Braswell</span>
                     </div>
                   </div>
-                </div>
-                <hr />
-                <div className="section-title mt-50 mb-40 text-center">
+                </div> */}
+                {/* <hr /> */}
+                {/* <div className="section-title mt-50 mb-40 text-center">
                   <h3>Related News</h3>
                 </div>
                 <Slider {...newsSlider} className="news-slider mb-60">
@@ -248,8 +248,8 @@ const BlogDetails = () => {
                       </Link>
                     </div>
                   </div>
-                </Slider>
-                <hr />
+                </Slider> */}
+                {/* <hr /> */}
                 <form
                   onSubmit={(e) => e.preventDefault()}
                   id="comment-form"
@@ -410,7 +410,7 @@ const BlogDetails = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="widget widget-news wow fadeInUp delay-0-2s">
+                {/* <div className="widget widget-news wow fadeInUp delay-0-2s">
                   <h4 className="widget-title">
                     <i className="flaticon-leaf-1" />
                     Recent News
@@ -465,7 +465,7 @@ const BlogDetails = () => {
                       </div>
                     </li>
                   </ul>
-                </div>
+                </div> */}
                 <div className="widget widget-tag-cloud wow fadeInUp delay-0-2s">
                   <h4 className="widget-title">
                     <i className="flaticon-leaf-1" />

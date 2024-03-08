@@ -240,9 +240,9 @@ const Services = () => {
                   <h4>Organic Vegetables</h4>
                   <p>Best Foods For Your Family</p>
                   <Link href="/shop-grid">
-                    <a className="theme-btn style-two">
+                    {/* <a className="theme-btn style-two">
                       Shop Now <i className="fas fa-angle-double-right" />
-                    </a>
+                    </a> */}
                   </Link>
                 </div>
               </div>
