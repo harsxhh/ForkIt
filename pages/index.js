@@ -8,12 +8,12 @@ import CustomerReviews from "../src/components/slider/CustomerReviews";
 import PhotoGallery from "../src/components/slider/PhotoGallery";
 import Layout from "../src/layout/Layout";
 import { productActive } from "../src/sliderProps";
-<<<<<<< HEAD
+
 import HorizontalBars from "../src/components/BarChart";
-=======
+
 import RecipeoftheDay from "../src/components/RecipeoftheDay";
 import { categorydata } from "../src/data/categorydata";
->>>>>>> bc75e7eb4a8605421e54cce7e83f2df93a69f109
+
 const MunfimCountdown = dynamic(
   () => import("../src/components/MunfimCountdown"),
   {
