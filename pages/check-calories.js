@@ -1,0 +1,58 @@
+import Link from "next/link";
+import React,{useEffect, useState} from "react";
+import PageBanner from "../src/components/PageBanner";
+import Pagination from "../src/components/Pagination";
+import Layout from "../src/layout/Layout";
+import axios from "axios";
+import SingleCard from "../src/components/SingleCard";
+const ShopGrid = () => {
+  const [data, setData] = useState();
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://apis-new.foodoscope.com/recipe-search/continents?searchText=Asian&region=Indian%20Subcontinent&pageSize=8",
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization:
+                "Bearer 5gtCRn6CMFkrTs6p2RSyfUcuD_-lSfTznLlnxSxdSZgsDnZk",
+            },
+          }
+        );
+        setData(response?.data?.payload?.data); 
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
+  console.log(data);
+  const handleChange = (e) => {
+    console.log(e.target.value);
+  };
+  return (
+    <Layout>
+      <PageBanner pageName={"Do you want to check calories? Check here..."} />
+      <section className="shop-page rel z-1 pt-120 rpt-90 pb-130 rpb-100">
+        <div className="flex items-center">
+          <input
+            type="text"
+            onChange={handleChange}
+            className="input-custom"
+            placeholder="Search for your favourite recipe..."
+          />
+          <button className="bg-blue-800 hover:bg-black-700 text-black font-bold py-2 px-4 ml-2 rounded">
+            Search
+          </button>
+        </div>
+        <div className="row m-4 mt-8 flex pt-20">
+        {data?.map((item,index)=>{
+          return (<SingleCard item={item} index={index}  />)
+        })}
+        </div>
+      </section>
+    </Layout>
+  );
+};
+export default ShopGrid;

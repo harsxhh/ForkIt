@@ -10,10 +10,14 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.3.1",
+<<<<<<< HEAD
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@mui/x-charts": "^6.19.5",
     "@mui/x-data-grid": "^6.19.6",
+=======
+    "@mui/material": "^5.15.12",
+>>>>>>> bc75e7eb4a8605421e54cce7e83f2df93a69f109
     "antd": "^5.15.1",
     "axios": "^1.6.7",
     "chart.js": "^4.4.2",
@@ -27,7 +31,10 @@
     "react-circular-progressbar": "^2.1.0",
     "react-countup": "^6.3.1",
     "react-dom": "18.2.0",
+    "react-icons": "^5.0.1",
     "react-nice-select": "^1.0.4",
+    "react-rating-component": "^1.0.0",
+    "react-share": "^5.1.0",
     "react-slick": "^0.29.0",
     "react-visibility-sensor": "^5.1.1",
     "styled-components": "^6.1.8",

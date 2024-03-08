@@ -8,7 +8,12 @@ import CustomerReviews from "../src/components/slider/CustomerReviews";
 import PhotoGallery from "../src/components/slider/PhotoGallery";
 import Layout from "../src/layout/Layout";
 import { productActive } from "../src/sliderProps";
+<<<<<<< HEAD
 import HorizontalBars from "../src/components/BarChart";
+=======
+import RecipeoftheDay from "../src/components/RecipeoftheDay";
+import { categorydata } from "../src/data/categorydata";
+>>>>>>> bc75e7eb4a8605421e54cce7e83f2df93a69f109
 const MunfimCountdown = dynamic(
   () => import("../src/components/MunfimCountdown"),
   {
@@ -58,56 +63,26 @@ const Index = () => {
             </div>
           </div>
           <div className="category-wrap">
-            <div className="category-item wow fadeInUp delay-0-3s">
-              <div className="icon">
-                <img src="assets/images/category/icon1.png" alt="Icon" />
+            {categorydata.map((item, i) => (
+              <div
+                className={`category-item wow fadeInUp delay-0-${i + 1}`}
+                key={i}
+              >
+                <div className="icon">
+                  <img src={item.url} alt="Icon" />
+                </div>
+                <h5>
+                  <Link href={`/search?category=${encodeURIComponent(item.title)}`}>{item.title}</Link>
+                </h5>
+                <img src="assets/images/category/arrow.png" alt="Arrow" />
               </div>
-              <h5>
-                <Link href="/services">Organic Fruits</Link>
-              </h5>
-              <img src="assets/images/category/arrow.png" alt="Arrow" />
-            </div>
-            <div className="category-item wow fadeInUp delay-0-4s">
-              <div className="icon">
-                <img src="assets/images/category/icon2.png" alt="Icon" />
-              </div>
-              <h5>
-                <Link href="/services">Vegetables</Link>
-              </h5>
-              <img src="assets/images/category/arrow.png" alt="Arrow" />
-            </div>
-            <div className="category-item wow fadeInUp delay-0-5s">
-              <div className="icon">
-                <img src="assets/images/category/icon3.png" alt="Icon" />
-              </div>
-              <h5>
-                <Link href="/services">Sea Food</Link>
-              </h5>
-              <img src="assets/images/category/arrow.png" alt="Arrow" />
-            </div>
-            <div className="category-item wow fadeInUp delay-0-6s">
-              <div className="icon">
-                <img src="assets/images/category/icon4.png" alt="Icon" />
-              </div>
-              <h5>
-                <Link href="/services">Crisp Bakery</Link>
-              </h5>
-              <img src="assets/images/category/arrow.png" alt="Arrow" />
-            </div>
-            <div className="category-item wow fadeInUp delay-0-7s">
-              <div className="icon">
-                <img src="assets/images/category/icon5.png" alt="Icon" />
-              </div>
-              <h5>
-                <Link href="/services">Chicken Egg</Link>
-              </h5>
-              <img src="assets/images/category/arrow.png" alt="Arrow" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
       {/* Category Section End */}
       {/* About Section Start */}
+      {/* <RecipeoftheDay/> */}
       <section className="about-section pt-85 rpt-55 pb-130 rpb-100">
         <div className="container">
           <div className="row align-items-center">
@@ -226,11 +201,11 @@ const Index = () => {
             <div className="col-xl-4 col-md-6">
               <div className="offer-banner-item color-two wow fadeInUp delay-0-2s">
                 <div className="content">
-                  <h4>What do you want to make?</h4>
-                  <p>Get accurate caloris count for your food here</p>
+                  <h4>Get Calories Count</h4>
+                  <p>Get accurate Calories count for your food here</p>
                   <Link href="/check-calories">
                     <a className="theme-btn style-two">
-                      Get info <i className="fas fa-angle-double-right" />
+                      Get count <i className="fas fa-angle-double-right" />
                     </a>
                   </Link>
                 </div>
@@ -274,8 +249,8 @@ const Index = () => {
             <div className="col-xl-4 col-md-6">
               <div className="offer-banner-item color-three wow fadeInUp delay-0-6s">
                 <div className="content">
-                  <h4>Check Ingredients</h4>
-                  <p>What ingredients does your food has? </p>
+                  <h4>Check Nutrients</h4>
+                  <p>How much macros does your food have? </p>
                   <Link href="/shop-grid">
                     <a className="theme-btn style-two">
                       Check <i className="fas fa-angle-double-right" />
