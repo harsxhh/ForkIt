@@ -1,66 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
 import axios from 'axios'
-
-const BasketContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  margin: 0 auto;
-  padding: 50px 0;
-  background-color: #f5f5f5;
-`
-
-const BasketImage = styled.img`
-  width: 100%;
-`
-
-const TextContainer = styled.div`
-  width: 60%;
-`
-
-const Title = styled.h2`
-  font-size: 36px;
-  margin-bottom: 10px;
-  color: #212121;
-`
-
-const Subheading = styled.h3`
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #212121;
-`
-
-const Description = styled.p`
-  font-size: 16px;
-  margin-bottom: 10px;
-  color: #707070;
-`
-
-const Basket = styled.div`
-  width: 40%;
-  margin-right: 20px;
-`
-
-const Brands = styled.div`
-  margin-bottom: 20px;
-`
-
-const Timer = styled.div`
-  display: flex;
-  flex-direction: row;
-`
-
-const TimerText = styled.p`
-  font-size: 24px;
-  margin: 0 5px;
-  color: #212121;
-`
-
-const Separator = styled.hr`
-  margin: 0 10px;
-  border: 1px solid #ddd;
-`
+import Link from 'next/link'
 
 function RecipeoftheDay() {
     const [recipe, setRecipe] = React.useState({});
@@ -77,7 +17,7 @@ function RecipeoftheDay() {
                         'Content-Type': 'application/json',
                     }
                 });
-                setRecipe(res.data);
+                setRecipe(res.data.payload);
                 console.log(res.data.payload);
             } catch (error) {
                 console.error('Error fetching recipe:', error);
@@ -88,33 +28,86 @@ function RecipeoftheDay() {
 
     }, []);
     return (
-        <BasketContainer>
-            <Basket>
-                <BasketImage src="/images/basket.png" alt="Basket of vegetables" />
-            </Basket>
-            <TextContainer>
-                <Title>Deal Of The Week</Title>
-                <Subheading>Eat Healthier</Subheading>
-                <Description>{recipe.description}</Description> {/* Use recipe state directly */}
-                <Brands>
-                    <h3>We Have Brands</h3>
-                    <Description>
-                        Modi tempora incidunt ut labore dolore magna aliquam.
-                    </Description>
-                </Brands>
-                <Timer>
-                    <TimerText>01</TimerText>
-                    <TimerText>days</TimerText>
-                    <TimerText>03</TimerText>
-                    <TimerText>min</TimerText>
-                    <TimerText>35</TimerText>
-                    <TimerText>sec</TimerText>
-                    <Separator />
-                    <TimerText>17</TimerText>
-                    <TimerText>hr</TimerText>
-                </Timer>
-            </TextContainer>
-        </BasketContainer>
+        <section className="what-we-provide-two rel z-1 pt-130 rpt-100 pb-115 rpb-55">
+        <div className="container">
+          <div className="section-title text-center mb-60">
+            <span className="sub-title mb-20">Recipe of the Day</span>
+            <h2>{recipe.Recipe_title}</h2>
+          </div>
+          <div className="row justify-content-between align-items-center">
+            <div className="col-xl-3 col-md-4">
+              <div className="what-we-provide-left wow fadeInUp delay-0-2s">
+                <div className="ww-provide-item">
+                  <div className="icon" style={{width:"30%",height:"30%"}}>
+                    <img src="assets/images/services/icon1.png" alt="Icon" />
+                  </div>
+                  <h4>
+                    <Link href="/service-details">Calories</Link>
+                  </h4>
+                  <p>{recipe.Calories} kCal</p>
+                </div>
+                <div className="ww-provide-item">
+                  <div className="icon" style={{width:"30%",height:"30%", textAlign: "right"}}>
+                    <img src="assets/images/services/icon2.png" alt="Icon" style={{ marginLeft: "auto" }} />
+                  </div>
+                  <h4>
+                    <Link href="/service-details">Region</Link>
+                  </h4>
+                  <p>{recipe.Region} ({recipe.Sub_region})</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-5 col-md-4">
+              <div className="what-we-provide-images rmt-10 rmb-55 pr-0 wow fadeInUp delay-0-4s">
+                <img
+                  src={recipe.img_url}
+                  alt="Service"
+                  style={{borderRadius:"20px"}}
+                />
+                <img
+                  className="bg"
+                  src="assets/images/services/service-center-bg.png"
+                  alt="Backgroound"
+                />
+              </div>
+            </div>
+            <div className="col-xl-3 col-md-4">
+              <div className="what-we-provide-right wow fadeInUp delay-0-6s">
+                <div className="ww-provide-item">
+                  <div className="icon" style={{width:"30%",height:"30%"}}>
+                    <img src="assets/images/services/icon3.png" alt="Icon" />
+                  </div>
+                  <h4>
+                    <Link href="/service-details">Servings</Link>
+                  </h4>
+                  <p>{recipe.servings} servings</p>
+                </div>
+                <div className="ww-provide-item">
+                  <div className="icon" style={{width:"30%",height:"30%"}}>
+                    <img src="assets/images/services/icon4.png" alt="Icon" />
+                  </div>
+                  <h4>
+                    <Link href="/service-details">Prep Time</Link>
+                  </h4>
+                  <p>{recipe.total_time} minutes</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="ww-provide-shapes">
+          <img
+            className="shape-two"
+            src="assets/images/shapes/ww-provide2.png"
+            alt="Shape"
+          />
+          <img
+            className="shape-three"
+            src="assets/images/shapes/ww-provide3.png"
+            alt="Shape"
+          />
+        </div>
+      </section>
     );
 }
 
