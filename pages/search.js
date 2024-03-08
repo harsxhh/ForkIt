@@ -52,14 +52,14 @@ function Search() {
                     </div>
                     {/* design cards as per search filters to be displayed */}
                     <div className="row" style={{ paddingTop: "20px" }}>
-                        {recipes && recipes.map((recipe, index) => (
-                            recipe.wikiimage && (
+                        {recipes && recipes?.map((recipe, index) => (
+                            (recipe?.wikiimage||recipe?.wikiimage==="NF") && (
                                 <div className="col-lg-4 col-md-6 mb-4" key={index}>
                                     <div className="card h-100 border-0 shadow" style={{ transition: "transform 0.3s ease-in-out", ":hover": { transform: "translateY(-5px)" } }}>
-                                        <img src={recipe.wikiimage} className="card-img-top img-fluid" alt="Recipe" style={{ height: "200px", objectFit: "cover" }} />
+                                        <img src={recipe?.wikiimage} className="card-img-top img-fluid" alt="Recipe" style={{ height: "200px", objectFit: "cover" }} />
                                         <div className="card-body d-flex flex-column justify-content-between">
                                             <div>
-                                                <h5 className="card-title">{recipe.generic_name}</h5>
+                                                <h5 className="card-title">{recipe?.generic_name}</h5>
                                             </div>
                                             <div className="mt-4">
                                                 <button className="btn btn-primary">View Recipe</button>

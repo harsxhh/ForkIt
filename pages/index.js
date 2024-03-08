@@ -197,11 +197,11 @@ const Index = () => {
             <div className="col-xl-4 col-md-6">
               <div className="offer-banner-item color-two wow fadeInUp delay-0-2s">
                 <div className="content">
-                  <h4>What do you want to make?</h4>
-                  <p>Get accurate caloris count for your food here</p>
+                  <h4>Get Calories Count</h4>
+                  <p>Get accurate Calories count for your food here</p>
                   <Link href="/check-calories">
                     <a className="theme-btn style-two">
-                      Get info <i className="fas fa-angle-double-right" />
+                      Get count <i className="fas fa-angle-double-right" />
                     </a>
                   </Link>
                 </div>

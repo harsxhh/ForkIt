@@ -1,39 +1,27 @@
 'use client';
 import React from "react";
-import { BsArrowUpRight } from "react-icons/bs";
-import { AiOutlineHeart, } from "react-icons/ai";
-import Link from "next/link";
-const SingleCard = ({item}) => {
+
+const SingleCard = ({ item, index }) => {
+    const [click, setClick] = React.useState(false);
+    const handleclick = (e,item) => {
+        if(e.type==='click'){
+            setClick(!click);
+        }
+    }
     return (
-        <div className="flex flex-col gap-1 justify-between shadow hover:shadow-lg rounded">
-            {/* Card Top */}
-            <div className="flex flex-col justify-between h-full ">
-                <div className="relative h-full w-full">
-                    {/* Only for singleData */}
-                    {/* Favorite & share button */}
-                    <div className="flex justify-between items-center absolute top-2 right-2">
-                        <AiOutlineHeart className="text-2xl cursor-pointer" />
+            <div className="col-lg-4 col-md-6 mb-4" key={index}>
+                <div className="card h-100 border-0 shadow" style={{ transition: "transform 0.3s ease-in-out", ":hover": { transform: "translateY(-5px)" } }}>
+                    <img src={item?.img_url} className="card-img-top img-fluid" alt="Recipe" style={{ height: "200px", objectFit: "cover" }} />
+                    <div className="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 className="card-title">{item?.Recipe_title.split(" ")[0]}</h5>
+                        </div>
+                        <div className="mt-4">
+                        <button className="btn btn-primary" onClick={handleclick}>{click ? item?.Calories : "View Calories"}</button>
+                        </div>
                     </div>
-                    {/* Card image */}
-                    <img
-                        src={item?.img_url}
-                        className="w-full object-cover object-center rounded-t"
-                    />
-                </div>
-                {/* Card Bottom details */}
-                <div className="flex flex-col gap-3 p-4">
-                    {/* Card heading */}
-                    <h4 className="font-bold text-lg">{item?.Recipe_title}</h4>
                 </div>
             </div>
-            {/* Read more link */}
-            <Link href={`/recipes/1726`} className="max-w-max">
-                <a className="flex gap-2 items-center p-4 mt-4 hover:border-primary hover:text-primary">
-                    Read more
-                    <BsArrowUpRight />
-                </a>
-            </Link>
-        </div>
     );
 };
 
