@@ -1,38 +1,52 @@
 import Link from "next/link";
+import React,{useEffect, useState} from "react";
 import PageBanner from "../src/components/PageBanner";
 import Pagination from "../src/components/Pagination";
 import Layout from "../src/layout/Layout";
+import axios from "axios";
+import SingleCard from "../src/components/SingleCard";
 const ShopGrid = () => {
+  const [data, setData] = useState();
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://apis-new.foodoscope.com/recipe-search/continents?searchText=Asian&region=Indian%20Subcontinent&pageSize=8",
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization:
+                "Bearer 5gtCRn6CMFkrTs6p2RSyfUcuD_-lSfTznLlnxSxdSZgsDnZk",
+            },
+          }
+        );
+        setData(response?.data?.payload?.data); 
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
+  console.log(data);
+  const handleChange = (e) => {
+    console.log(e.target.value);
+  };
   return (
     <Layout>
-      <PageBanner pageName={"Shop Grid"} />
+      <PageBanner pageName={"Do you want to make recipe? Check steps here..."} />
       <section className="shop-page rel z-1 pt-120 rpt-90 pb-130 rpb-100">
-        <div className="container">
-          <div className="shop-shorter rel z-3 pt-10 mb-40 wow fadeInUp delay-0-2s">
-            <div className="products-dropdown">
-              <select>
-                <option value="default" selected="">
-                  Best Selling
-                </option>
-                <option value="new">Latest</option>
-                <option value="old">Oldest</option>
-                <option value="hight-to-low">High To Low</option>
-                <option value="low-to-high">Low To High</option>
-              </select>
-            </div>
-            <ul className="grid-list">
-              <li>
-                <a href="#">
-                  <i className="fas fa-border-all" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fas fa-bars" />
-                </a>
-              </li>
-            </ul>
-          </div>
+        <div className="flex items-center">
+          <input
+            type="text"
+            onChange={handleChange}
+            className="input-custom"
+          />
+          <button className="bg-blue-800 hover:bg-black-700 text-black font-bold py-2 px-4 ml-2 rounded">
+            Search
+          </button>
+        </div>
+
+        {/* <div className="container">
           <div className="row show-grid-row">
             <div className="col-xl-3 col-lg-4 col-sm-6">
               <div className="product-item wow fadeInUp delay-0-2s">
@@ -353,7 +367,10 @@ const ShopGrid = () => {
               defaultSort={8}
             />
           </ul>
-        </div>
+        </div> */}
+        {data?.map((item)=>{
+          return (<SingleCard item={item} />)
+        })}
       </section>
     </Layout>
   );
