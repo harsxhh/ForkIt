@@ -42,14 +42,14 @@ const ProductDetails = () => {
             <div className="col-xl-5 col-lg-6">
               <div className="product-details-content mb-30 wow fadeInRight delay-0-2s">
                 <div className="off-ratting mb-15">
-                  <span className="off">20 Off</span>
-                  <div className="ratting">
+                  {/* <span className="off">20 Off</span> */}
+                  {/* <div className="ratting">
                     <i className="fas fa-star" />
                     <i className="fas fa-star" />
                     <i className="fas fa-star" />
                     <i className="fas fa-star" />
                     <i className="fas fa-star" />
-                  </div>
+                  </div> */}
                 </div>
                 <div className="section-title mb-20">
                   <h2>Organic Vegetable</h2>
@@ -59,8 +59,8 @@ const ProductDetails = () => {
                   eiusmod tempor incididunt ut labore et dolore magna aliquauis
                   ipsum suspendisse ultrices gravida
                 </p>
-                <span className="price mb-20">55.96</span>
-                <hr />
+                {/* <span className="price mb-20">55.96</span> */}
+                {/* <hr />
                 <form
                   onSubmit={(e) => e.preventDefault()}
                   action="#"
@@ -77,7 +77,7 @@ const ProductDetails = () => {
                     Add to Cart <i className="fas fa-angle-double-right" />
                   </button>
                 </form>
-                <hr />
+                <hr /> */}
                 <ul className="category-tags pt-10">
                   <li>
                     <b>Category</b>

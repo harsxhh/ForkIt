@@ -1,5 +1,6 @@
 import PageBanner from "../src/components/PageBanner";
 import Layout from "../src/layout/Layout";
+import ApexChart from "../src/components/BarChart";
 
 import dynamic from "next/dynamic";
 import ClientLogoSlider from "../src/components/ClientLogoSlider";
@@ -14,11 +15,13 @@ const PortfolioGridIsotope = dynamic(
 const PortfolioGrid = () => {
   return (
     <Layout>
+      <ApexChart/>
       <PageBanner pageName={"Portfolio Grid"} />
       <PortfolioGridIsotope />
       {/* Portfolio Fluid End */}
       {/* Client Logo Section Start */}
       <div className="client-logo-section text-center bg-light-green py-60">
+        
         <div className="container">
           <ClientLogoSlider />
         </div>

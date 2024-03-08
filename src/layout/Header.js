@@ -153,10 +153,10 @@ const DefaultHeader = () => (
             <div className="nav-search py-15">
               <SearchBtn />
             </div>
-            <button className="cart">
+            {/* <button className="cart">
               <i className="far fa-shopping-basket" />
               <span>5</span>
-            </button>
+            </button> */}
             <button className="user">
               <i className="far fa-user-circle" />
             </button>
@@ -258,10 +258,10 @@ const Header1 = () => (
             <div className="nav-search py-15">
               <SearchBtn />
             </div>
-            <button className="cart">
+            {/* <button className="cart">
               <i className="far fa-shopping-basket" />
               <span>5</span>
-            </button>
+            </button> */}
             <button className="user">
               <i className="far fa-user-circle" />
             </button>
@@ -377,9 +377,9 @@ const Header2 = () => (
                 <button type="submit" className="searchbutton far fa-search" />
               </form>
             </div>
-            <button className="cart">
+            {/* <button className="cart">
               <i className="far fa-shopping-basket" />
-            </button>
+            </button> */}
             {/* menu sidbar */}
             <div className="menu-sidebar" onClick={() => sidebarToggle()}>
               <button>
@@ -460,10 +460,10 @@ const Header3 = () => (
               />
               <button type="submit" className="searchbutton far fa-search" />
             </form>
-            <button className="cart">
+            {/* <button className="cart">
               <i className="far fa-shopping-basket" />
               <span>5</span>
-            </button>
+            </button> */}
             <button className="user">
               <i className="far fa-user-circle" />
             </button>
