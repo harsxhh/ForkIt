@@ -8,6 +8,7 @@ import CustomerReviews from "../src/components/slider/CustomerReviews";
 import PhotoGallery from "../src/components/slider/PhotoGallery";
 import Layout from "../src/layout/Layout";
 import { productActive } from "../src/sliderProps";
+import HorizontalBars from "../src/components/BarChart";
 const MunfimCountdown = dynamic(
   () => import("../src/components/MunfimCountdown"),
   {

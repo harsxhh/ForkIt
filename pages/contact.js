@@ -18,7 +18,7 @@ const ContactUs = () => {
                 </div>
                 <div className="content">
                   <h4>Location</h4>
-                  <span>57 Main Street, 2nd Block 3rd Floor, New York</span>
+                  <span>IIIT Una</span>
                 </div>
               </div>
             </div>
@@ -29,9 +29,9 @@ const ContactUs = () => {
                 </div>
                 <div className="content">
                   <h4>Email Us</h4>
-                  <a href="mailto:organicfarm@mail.net">organicfarm@mail.net</a>
+                  <a href="mailto:organicfarm@mail.net">yashs3324@gmail.com</a>
                   <br />
-                  <a href="mailto:support@info.com">support@info.com</a>
+                  <a href="mailto:support@info.com">support@iiituna.com</a>
                   <br />
                 </div>
               </div>
@@ -43,9 +43,9 @@ const ContactUs = () => {
                 </div>
                 <div className="content">
                   <h4>Phone Us</h4>
-                  <a href="callto:+000(111)345678">+000 (111) 345 678</a>
+                  <a href="callto:+000(111)345678">+91 8755765125</a>
                   <br />
-                  <a href="callto:+012(345)67899">+012 (345) 678 99</a>
+                  <a href="callto:+012(345)67899">+91 8766122123</a>
                 </div>
               </div>
             </div>
