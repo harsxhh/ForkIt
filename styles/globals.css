@@ -68,3 +68,10 @@ img.mfp-img {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.input-custom {
+  height: 10%;
+  @apply bg-gray-200 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500;
+  width: 30%;
+  margin-left: 10rem;
+  margin-bottom: 2rem;
+}
