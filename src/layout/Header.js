@@ -115,7 +115,7 @@ const Nav = () => {
         </button>
       </div>
       <div className={`navbar-collapse collapse clearfix ${nav ? "show" : ""}`}>
-        <DaskTopMenu />
+        <DaskTopMenu style={{ paddingLeft: "200px" }}/>
         <MobileMenu />
       </div>
     </nav>
@@ -150,21 +150,10 @@ const DefaultHeader = () => (
           {/* Menu Button */}
           <div className="menu-icons">
             {/* Nav Search */}
-            <div className="nav-search py-15">
-              <SearchBtn />
-            </div>
             {/* <button className="cart">
               <i className="far fa-shopping-basket" />
               <span>5</span>
             </button> */}
-            <button className="user">
-              <i className="far fa-user-circle" />
-            </button>
-            <Link href="/contact">
-              <a className="theme-btn">
-                Consultations <i className="fas fa-angle-double-right" />
-              </a>
-            </Link>
             {/* menu sidbar */}
             <div className="menu-sidebar" onClick={() => sidebarToggle()}>
               <button>

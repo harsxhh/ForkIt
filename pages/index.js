@@ -1,3 +1,4 @@
+import React from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Nav, Tab } from "react-bootstrap";
@@ -8,12 +9,13 @@ import CustomerReviews from "../src/components/slider/CustomerReviews";
 import PhotoGallery from "../src/components/slider/PhotoGallery";
 import Layout from "../src/layout/Layout";
 import { productActive } from "../src/sliderProps";
-
+import axios from "axios";
 import HorizontalBars from "../src/components/BarChart";
 
 import RecipeoftheDay from "../src/components/RecipeoftheDay";
 import { categorydata } from "../src/data/categorydata";
-
+import { bannerdata } from "../src/data/bannerdata";
+import Banner from "../src/components/Banner";
 const MunfimCountdown = dynamic(
   () => import("../src/components/MunfimCountdown"),
   {
@@ -83,118 +85,9 @@ const Index = () => {
       {/* Category Section End */}
       {/* About Section Start */}
       {/* <RecipeoftheDay/> */}
-      <section className="about-section pt-85 rpt-55 pb-130 rpb-100">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
-              <div className="about-images wow fadeInLeft delay-0-2s">
-                <div className="row align-items-center">
-                  <div className="col-6">
-                    <img src="assets/images/about/about1.jpg" alt="About" />
-                  </div>
-                  <div className="col-6">
-                    <img src="assets/images/about/about2.jpg" alt="About" />
-                    <img src="assets/images/about/about3.jpg" alt="About" />
-                  </div>
-                </div>
-                <div className="offer">
-                  <img src="assets/images/shapes/organic.png" alt="Offer" />
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="about-content rpt-65 wow fadeInRight delay-0-2s">
-                <div className="section-title mb-35">
-                  <span className="sub-title mb-20">About Company</span>
-                  <h2>Organic &amp; Helathy Foods Provider Farming</h2>
-                </div>
-                <Tab.Container defaultActiveKey={"agriculture"}>
-                  <Nav className="nav jusctify-content-between">
-                    <li>
-                      <Nav.Link
-                        eventKey="agriculture"
-                        className="nav-link"
-                        data-toggle="tab"
-                        href="#agriculture"
-                      >
-                        <i className="flaticon-spa" />
-                        <h4>
-                          Agriculture
-                          <br />
-                          &amp; Foods
-                        </h4>
-                      </Nav.Link>
-                    </li>
-                    <li>
-                      <Nav.Link
-                        eventKey="vegetables"
-                        className="nav-link"
-                        data-toggle="tab"
-                        href="#vegetables"
-                      >
-                        <i className="flaticon-spa" />
-                        <h4>
-                          Vegetables
-                          <br />
-                          &amp; Fruits
-                        </h4>
-                      </Nav.Link>
-                    </li>
-                  </Nav>
-                  <Tab.Content className="tab-content pt-25">
-                    <Tab.Pane className="tab-pane fade" eventKey="agriculture">
-                      <p>
-                        On the other hand we denounce with righteous indignation
-                        and dislike men who are beguiled and demoralized by the
-                        charms of pleasure of the moment so blinded by desire,
-                        that they cannot foresee the pain
-                      </p>
-                      <div className="author-wrap">
-                        <img
-                          src="assets/images/about/author.jpg"
-                          alt="Authro"
-                        />
-                        <div className="title">
-                          <h4>Michael D. Foreman</h4>
-                          <span>CEO &amp; Founder</span>
-                        </div>
-                        <img
-                          src="assets/images/about/signature.png"
-                          alt="Signature"
-                        />
-                      </div>
-                    </Tab.Pane>
-                    <Tab.Pane className="tab-pane fade" eventKey="vegetables">
-                      <p>
-                        Charms of pleasure of the moment so blinded by desire,
-                        that they cannot foresee the pain On the other hand we
-                        denounce with righteous indignation and dislike men who
-                        are beguiled and demoralized by the
-                      </p>
-                      <div className="author-wrap">
-                        <img
-                          src="assets/images/about/author.jpg"
-                          alt="Authro"
-                        />
-                        <div className="title">
-                          <h4>Russell J. Knoll</h4>
-                          <span>CEO &amp; Founder</span>
-                        </div>
-                        <img
-                          src="assets/images/about/signature.png"
-                          alt="Signature"
-                        />
-                      </div>
-                    </Tab.Pane>
-                  </Tab.Content>
-                </Tab.Container>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       {/* About Section End */}
       {/* Offer Banners Start */}
+
       <section className="offer-banners-area">
         <div className="container-fluid">
           <div className="row">
@@ -227,7 +120,7 @@ const Index = () => {
                 <div className="content">
                   <h4>What is best for you to Eat?</h4>
                   <p>Best Foods For Your Health</p>
-                  <Link href="/check-calories">
+                  <Link href="/personalized-result">
                     <a className="theme-btn style-two">
                       Search <i className="fas fa-angle-double-right" />
                     </a>
@@ -251,7 +144,7 @@ const Index = () => {
                 <div className="content">
                   <h4>Check Nutrients</h4>
                   <p>How much macros does your food have? </p>
-                  <Link href="/search?category='Beverage'">
+                  <Link href="/search?recipe='rice'&region='Indian Subcontinent'&subRegion='India'&page=1">
                     <a className="theme-btn style-two">
                       Check <i className="fas fa-angle-double-right" />
                     </a>
@@ -273,9 +166,10 @@ const Index = () => {
           </div>
         </div>
       </section>
+      {/* <Banner data={bannerdata} /> */}
       {/* Offer Banners End */}
       {/* Product Section Start */}
-      <section className="product-section pt-100 rpt-70 pb-130 rpb-100">
+      {/* <section className="product-section pt-30 rpt-70 pb-130 rpb-100">
         <div className="container-fluid">
           <div className="section-title text-center mb-60">
             <span className="sub-title mb-20">
@@ -436,14 +330,14 @@ const Index = () => {
             </div>
           </Slider>
         </div>
-      </section>
+      </section> */}
       {/* Product Section End */}
       {/* Special Offer Start */}
-      <section className="special-offer bg-lighter pt-250 pb-80">
+      <section className="special-offer bg-lighter pb-80">
         <div className="special-offer-content text-center py-130 rpy-100 wow fadeInUp delay-0-2s">
           <div className="section-title mb-30">
-            <span className="sub-title mb-20">35% Off for Fruits</span>
-            <h2>Special Deal Of This Week</h2>
+            <span className="sub-title mb-20">Special Recipes based on</span>
+            <h2>Your Region & SubRegion</h2>
           </div>
           <p>
             On the other hand we denounce with righteous indignation and dislike
@@ -554,7 +448,7 @@ const Index = () => {
       </section>
       {/* Feedback Section End */}
       {/* News Section Start */}
-      <section className="news-section pt-130 rpt-100 pb-70 rpb-40">
+      {/* <section className="news-section pt-130 rpt-100 pb-70 rpb-40">
         <div className="container">
           <div className="section-title text-center mb-60">
             <span className="sub-title mb-20">Read Article Tips</span>
@@ -659,10 +553,10 @@ const Index = () => {
             alt="Leaf"
           />
         </div>
-      </section>
+      </section> */}
       {/* News Section End */}
       {/* Client Logo Section Start */}
-      <div className="client-logo-section text-center bg-light-green py-60">
+      {/* <div className="client-logo-section text-center bg-light-green py-60">
         <div className="container">
           <ClientLogoSlider />
         </div>
@@ -698,7 +592,7 @@ const Index = () => {
             alt="Shape"
           />
         </div>
-      </div>
+      </div> */}
     </Layout>
   );
 };

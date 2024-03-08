@@ -5,7 +5,7 @@ import RecipeModal from './RecipeModal';
 
 function Search() {
     const router = useRouter();
-    const { pathname, query } = router;
+    const {  query } = router;
     const { category } = query;
     const [recipes, setRecipes] = useState([]);
     const [selectedRecipe, setSelectedRecipe] = useState(null);
