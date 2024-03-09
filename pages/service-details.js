@@ -6,30 +6,28 @@ import Layout from "../src/layout/Layout";
 const ServiceDetails = () => {
   return (
     <Layout>
-      <PageBanner pageName={"Service Details"} />
+      <PageBanner pageName={"Learn about what you eat"} />
       <section className="service-details-page rel z-1 pt-65 rpt-35 pb-130 rpb-100">
         <div className="container">
           <div className="row">
-            <div className="col-xl-8 mt-65">
+            <div className="col-xl-8 mt-100">
               <div className="service-details-content">
                 <div className="image wow fadeInUp delay-0-2s">
                   <img
-                    src="assets/images/services/service-details1.jpg"
+                    src="assets/images/services/vitamins.png"
                     alt="Service"
                   />
                 </div>
-                <h3>Fruits &amp; Vegetables</h3>
+                <h3>Vitamins</h3>
                 <p>
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae abillo inventore veritatis et quasi atecto beatae
-                  vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                  voluptas sit asnatur aut odit aut fugit, sed quia consequuntur
-                  magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
-                  porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                  consectetur, adipisci velit, sed quia non numquam eius modi
-                  tempora incidunt ut labore et dolore magnam aliquam quaerat
-                  voluptatem.
+                Vitamins are organic substances present in minute amounts in natural foodstuffs. Having too little of any particular vitamin may increase the risk of developing certain health issues.
+
+                A vitamin is an organic compound, which means that it contains carbon. It is also an essential nutrient that the body may need to get from food.
+
+                There are currently 13 recognized vitamins.
+
+
+
                 </p>
                 <div className="row py-20">
                   <div className="col-lg-3 col-sm-6">
@@ -38,12 +36,11 @@ const ServiceDetails = () => {
                         <i className="flaticon-wheat-sack" />
                       </div>
                       <h4>
-                        <Link href="/service-details">
-                          <a>
-                            Agriculture
-                            <br /> Foods
-                          </a>
-                        </Link>
+                        <a href="https://www.hsph.harvard.edu/nutritionsource/vitamin-a/"
+                          target="_blank"
+                        >
+                          Vitamin A
+                        </a>
                       </h4>
                     </div>
                   </div>
@@ -53,13 +50,14 @@ const ServiceDetails = () => {
                         <i className="flaticon-fruits" />
                       </div>
                       <h4>
-                        <Link href="/service-details">
-                          <a>
+                        
+                          <a href="https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/#:~:text=Vitamin%20D%20(also%20referred%20to,and%20trigger%20vitamin%20D%20synthesis."
+                            target="_blank"
+                          >
                             {" "}
-                            Vegetables
-                            <br /> &amp; Fruits
+                            Vitamin D
                           </a>
-                        </Link>
+                        
                       </h4>
                     </div>
                   </div>
@@ -69,13 +67,14 @@ const ServiceDetails = () => {
                         <i className="flaticon-eggs-1" />
                       </div>
                       <h4>
-                        <Link href="/service-details">
-                          <a>
+                        
+                          <a href="https://www.hsph.harvard.edu/nutritionsource/vitamin-e/#:~:text=Vitamin%20E%20is%20a%20fat,%E2%80%9D%E2%80%94that%20can%20damage%20cells."
+                            target="_blank"
+                          >
                             {" "}
-                            Farming
-                            <br /> Products
+                            Vitamin E
                           </a>
-                        </Link>
+                        
                       </h4>
                     </div>
                   </div>
@@ -85,53 +84,287 @@ const ServiceDetails = () => {
                         <i className="flaticon-return-box" />
                       </div>
                       <h4>
-                        <Link href="/service-details">
-                          <a>
+                        
+                          <a href="https://www.hsph.harvard.edu/nutritionsource/vitamin-k/"
+                            target="_blank"
+                          >
                             {" "}
-                            Crisp Bread
-                            <br /> &amp; Cake’s
+                            Vitamin K
                           </a>
-                        </Link>
+                        
                       </h4>
                     </div>
                   </div>
                 </div>
-                <h4>Healthy and Testy Foods</h4>
-                <p>
-                  Zemo enim ipsam voluptatem quia voluptas sit asnatur aut odit
-                  aut fugit sed sequuntur magni dolores eos qui ratione
-                  voluptatem sequi nesciunt. Neque porro quisquam estquis
-                  dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
-                  sed quia non numquam eius tempora incidunt ut labore et dolore
-                  magnam aliquam quaerat voluptatem.
-                </p>
-                <ul className="list-style-two pt-10">
-                  <li>Agriculture &amp; Foods</li>
-                  <li>Organic Fruits &amp; Vegetables</li>
-                  <li>Crispe Bread &amp; Cakes</li>
-                </ul>
-                <div className="image pt-50 wow fadeInUp delay-0-2s">
-                  <img
-                    src="assets/images/services/service-details2.jpg"
-                    alt="Service"
-                  />
+                <div className="container mt-5">
+                <div className="row">
+                  <div className="col-md-12">
+                    <h2 className="mb-4">Healthy Foods to Fulfill Vitamin Deficiencies</h2>
+                    <p>
+                      Explore a variety of nutrient-rich foods that can help fulfill vitamin deficiencies and promote overall well-being.
+                    </p>
+                  </div>
                 </div>
-                <h4>Why Need Organic Foods</h4>
-                <p>
-                  On the other hand, we denounce with righteous indignation and
-                  dislike men who are so beguiled and demoralized by the charms
-                  of pleasure of the moments blinded desire that they cannot
-                  foresee the pain and trouble that are bound to ensueand equal
-                  blame longs to those who fail in their duty through weakness{" "}
-                </p>
-                <blockquote>
-                  Quis autem veleu mure reprehenderit quin voluptate velit esse
-                  quam nihil molestiae consequatur illum dolorem eum fugiat quo
-                  voluptas nulla pariatur
-                </blockquote>
+
+                <div className="row mt-4">
+                  <div className="col-md-4 mb-4">
+                    <div className="card">
+                      <img
+                        src="https://www.maxirich.com/blogs/wp-content/uploads/2022/04/Blog_721apr2022.jpg"
+                        alt="Vitamin C Rich Food"
+                        className="card-img-top"
+                      />
+                      <div className="card-body">
+                        <h5 className="card-title">Citrus Fruits</h5>
+                        <p className="card-text">
+                          Citrus fruits like oranges, lemons, and grapefruits are rich in vitamin C, which supports immune health.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-md-4 mb-4">
+                    <div className="card">
+                      <img
+                        src="https://img.paisawapas.com/ovz3vew9pw/2022/11/02113841/Untitled-1.jpg"
+                        alt="Vitamin D Rich Food"
+                        className="card-img-top"
+                      />
+                      <div className="card-body">
+                        <h5 className="card-title">Fatty Fish</h5>
+                        <p className="card-text">
+                          Fatty fish such as salmon and mackerel are excellent sources of vitamin D, crucial for bone health.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-md-4 mb-4">
+                    <div className="card">
+                      <img
+                        src="https://imgeng.jagran.com/images/2023/may/foods-rich-in-votamin-a1684215141670.jpg"
+                        alt="Vitamin A Rich Food"
+                        className="card-img-top"
+                      />
+                      <div className="card-body">
+                        <h5 className="card-title">Carrots</h5>
+                        <p className="card-text">
+                          Carrots are packed with beta-carotene, a precursor to vitamin A, important for vision and skin health.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          
+
+
               </div>
             </div>
             <div className="col-xl-4 col-lg-6 col-md-8">
+              <div className="service-sidebar mt-65">
+                {/* <div className="widget widget-search wow fadeInUp delay-0-2s">
+                  <form onSubmit={(e) => e.preventDefault()} action="#">
+                    <input
+                      type="text"
+                      placeholder="Service Category"
+                      required=""
+                    />
+                    <button
+                      type="submit"
+                      className="searchbutton fa fa-search"
+                    />
+                  </form>
+                </div> */}
+                
+                <div className="widget widget-cta wow fadeInUp delay-0-2s">
+                  <div className="cta-widget-content text-white">
+                    <span className="sub-title my-10">Contact Us</span>
+                    <h2>Need any Helps</h2>
+                    <img src="assets/images/shapes/wave-white.png" alt="Wave" />
+                    <br />
+                    <Link href="/contact">
+                      <a className="theme-btn style-three bg-white mt-30">
+                        Contact Us <i className="fas fa-angle-double-right" />
+                      </a>
+                    </Link>
+                    <img
+                      className="bg"
+                      src="assets/images/widgets/cta-widget.png"
+                      alt="Flower"
+                    />
+                  </div>
+                </div>
+                {/* <div className="widget widget-btns wow fadeInUp delay-0-2s">
+                  <h4 className="widget-title">Download Now</h4>
+                  <Link href="/contact">
+                    <a className="theme-btn mb-10">
+                      Download Pdf <i className="far fa-file-pdf" />
+                    </a>
+                  </Link>
+                  <Link href="/contact">
+                    <a className="theme-btn style-two">
+                      Download Doc <i className="far fa-file-word" />
+                    </a>
+                  </Link>
+                </div> */}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="service-details-page rel z-1 pt-65 rpt-35 pb-130 rpb-100">
+        <div className="container">
+          <div className="row">
+            <div className="col-xxl-8 mt-0">
+              <div className="service-details-content">
+                <div className="image wow fadeInUp delay-0-2s">
+                  <img
+                    src="assets/images/services/pngegg.png"
+                    alt="Service"
+                  />
+                </div>
+                <h3>Minerals</h3>
+                <p>
+                Did you know that the strength of your bones, the rhythm of your heart, and even the production of hormones depend on tiny but mighty elements called minerals? Get ready to explore the fascinating functions of minerals and how they contribute to a healthy body.
+
+
+
+                </p>
+                <div className="row py-20">
+                  <div className="col-lg-3 col-sm-6">
+                    <div className="about-feature-two style-two wow fadeInUp delay-0-2s">
+                      <div className="icon">
+                        <i className="flaticon-wheat-sack" />
+                      </div>
+                      <h4>
+                        <a href="https://www.webmd.com/diet/foods-high-in-calcium"
+                          target="_blank"
+                        >
+                          Calcium
+                        </a>
+                      </h4>
+                    </div>
+                  </div>
+                  <div className="col-lg-3 col-sm-6">
+                    <div className="about-feature-two style-two wow fadeInUp delay-0-3s">
+                      <div className="icon">
+                        <i className="flaticon-fruits" />
+                      </div>
+                      <h4>
+                        
+                          <a href="https://www.healthlinkbc.ca/healthy-eating-physical-activity/food-and-nutrition/nutrients/iron-foods"
+                            target="_blank"
+                          >
+                            {" "}
+                            Iron
+                          </a>
+                        
+                      </h4>
+                    </div>
+                  </div>
+                  <div className="col-lg-3 col-sm-6">
+                    <div className="about-feature-two style-two wow fadeInUp delay-0-4s">
+                      <div className="icon">
+                        <i className="flaticon-eggs-1" />
+                      </div>
+                      <h4>
+                        
+                          <a href="https://www.healthline.com/nutrition/10-foods-high-in-magnesium#avocados"
+                            target="_blank"
+                          >
+                            {" "}
+                            Magnesium
+                          </a>
+                        
+                      </h4>
+                    </div>
+                  </div>
+                  <div className="col-lg-3 col-sm-6">
+                    <div className="about-feature-two style-two wow fadeInUp delay-0-5s">
+                      <div className="icon">
+                        <i className="flaticon-return-box" />
+                      </div>
+                      <h4>
+                        
+                          <a href="https://www.hsph.harvard.edu/nutritionsource/potassium/"
+                            target="_blank"
+                          >
+                            {" "}
+                            Potassium
+                          </a>
+                        
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <div className="container mt-5">
+      <div className="row">
+        <div className="col-md-12">
+          <h2 className="mb-4">Foods High in Minerals</h2>
+          <p>
+            Explore a variety of nutrient-rich foods that are high in minerals such as iron, calcium, and magnesium.
+          </p>
+        </div>
+      </div>
+
+      <div className="row mt-4">
+        {/* Iron-Rich Food */}
+        <div className="col-md-4 mb-4">
+          <div className="card">
+            <img
+              src="https://www.dietitianpriyanka.com/wp-content/uploads/2022/11/Top-Iron-Rich-Food-For-Weight-Loss.jpg"
+              alt="Iron-Rich Food"
+              className="card-img-top"
+            />
+            <div className="card-body">
+              <h5 className="card-title">Spinach</h5>
+              <p className="card-text">
+                Spinach is a great source of iron, essential for the production of red blood cells.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Calcium-Rich Food */}
+        <div className="col-md-4 mb-4">
+          <div className="card">
+            <img
+              src="https://wellcurve.in/blog/wp-content/uploads/2021/10/calcium-rich-foods.jpg"
+              alt="Calcium-Rich Food"
+              className="card-img-top"
+            />
+            <div className="card-body">
+              <h5 className="card-title">Milk and Dairy</h5>
+              <p className="card-text">
+                Milk and dairy products are rich in calcium, crucial for bone health and muscle function.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Magnesium-Rich Food */}
+        <div className="col-md-4 mb-4">
+          <div className="card">
+            <img
+              src="https://domf5oio6qrcr.cloudfront.net/medialibrary/14228/f30cdb39-6809-4e7e-b759-97d97594ec26.jpg"
+              alt="Magnesium-Rich Food"
+              className="card-img-top"
+            />
+            <div className="card-body">
+              <h5 className="card-title">Almonds</h5>
+              <p className="card-text">
+                Almonds are a good source of magnesium, important for nerve and muscle function.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+              </div>
+            </div>
+            {/* <div className="col-xl-4 col-lg-6 col-md-8">
               <div className="service-sidebar mt-65">
                 <div className="widget widget-search wow fadeInUp delay-0-2s">
                   <form onSubmit={(e) => e.preventDefault()} action="#">
@@ -146,32 +379,7 @@ const ServiceDetails = () => {
                     />
                   </form>
                 </div>
-                <div className="widget widget-menu wow fadeInUp delay-0-4s">
-                  <h4 className="widget-title">Service Category</h4>
-                  <ul>
-                    <li>
-                      <Link href="/service-details">Agriculture</Link>
-                    </li>
-                    <li>
-                      <Link href="/service-details">
-                        Fruits &amp; Vegetables
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/service-details">
-                        Crispe Bread &amp; Cakes
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/service-details">
-                        Chiken Meat &amp; Eggs
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/service-details">Farming Products</Link>
-                    </li>
-                  </ul>
-                </div>
+                
                 <div className="widget widget-cta wow fadeInUp delay-0-2s">
                   <div className="cta-widget-content text-white">
                     <span className="sub-title my-10">Contact Us</span>
@@ -204,125 +412,227 @@ const ServiceDetails = () => {
                   </Link>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
       {/* Service Details Section End */}
       {/* Video Area Start */}
-      <div className="cta-video-area">
-        <div className="row no-gutters">
-          <div className="col-lg-6">
-            <div
-              className="video-cta-inner content-part text-white overlay wow fadeInUp delay-0-2s"
-              style={{
-                backgroundImage: "url(assets/images/video/cta-video-left.jpg)",
-              }}
-            >
-              <div className="content">
-                <div className="section-title mb-30">
-                  <span className="sub-title mb-20">Need Any Supports</span>
-                  <h2>Get Our Quality Foods</h2>
-                </div>
-                <Link href="/contact">
-                  <a className="theme-btn style-two">
-                    Get In Touch <i className="fas fa-angle-double-right" />
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-6">
-            <div
-              className="video-cta-inner video-part text-white overlay wow fadeInUp delay-0-4s"
-              style={{
-                backgroundImage: "url(assets/images/video/cta-video-right.jpg)",
-              }}
-            >
-              <div className="content">
-                <i className="flaticon-leaf-1" />
-                <span className="video-text">Watch Videos</span>
-                <a
-                  href="https://www.youtube.com/watch?v=9Y7ma241N8k"
-                  className="mfp-iframe video-play"
-                >
-                  <i className="fas fa-play" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Video Area End */}
-      {/* Feedback Section Start */}
-      <section className="feedback-section py-130 rpy-100">
-        <div className="container">
-          <div className="row large-gap">
-            <div className="col-lg-6">
-              <CustomerReviews />
-            </div>
-            <div className="col-lg-6">
-              <div className="feedback-images wow fadeInRight delay-0-2s">
-                <img
-                  className="first-image"
-                  src="assets/images/reviews/feedback-right.jpg"
-                  alt="Feedback"
-                />
-                <img
-                  className="last-image"
-                  src="assets/images/reviews/feedback-right.png"
-                  alt="Feedback"
-                />
-                <img
-                  className="bg-image"
-                  src="assets/images/shapes/feedback-bg.png"
-                  alt="Feedback"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Feedback Section End */}
-      {/* Client Logo Section Start */}
-      <div className="client-logo-section text-center bg-light-green py-60">
-        <div className="container">
-          <ClientLogoSlider />
-        </div>
-        <div className="client-logo-shapes">
-          <img
-            className="shape-one"
-            src="assets/images/shapes/cl-shape1.png"
-            alt="Shape"
-          />
-          <img
-            className="shape-two"
-            src="assets/images/shapes/cl-shape2.png"
-            alt="Shape"
-          />
-          <img
-            className="shape-three"
-            src="assets/images/shapes/cl-shape3.png"
-            alt="Shape"
-          />
-          <img
-            className="shape-four"
-            src="assets/images/shapes/cl-shape4.png"
-            alt="Shape"
-          />
-          <img
-            className="shape-five"
-            src="assets/images/shapes/cl-shape5.png"
-            alt="Shape"
-          />
-          <img
-            className="shape-six"
-            src="assets/images/shapes/cl-shape6.png"
-            alt="Shape"
-          />
-        </div>
-      </div>
+      
     </Layout>
   );
 };
 export default ServiceDetails;
+
+
+
+
+
+
+// <section className="service-details-page rel z-1 pt-65 rpt-35 pb-130 rpb-100">
+//         <div className="container">
+//           <div className="row">
+//             <div className="col-xl-8 mt-100">
+//               <div className="service-details-content">
+//                 <div className="image wow fadeInUp delay-0-2s">
+//                   <img
+//                     src="assets/images/services/vitamins.png"
+//                     alt="Service"
+//                   />
+//                 </div>
+//                 <h3>Vitamins</h3>
+//                 <p>
+//                 Vitamins are organic substances present in minute amounts in natural foodstuffs. Having too little of any particular vitamin may increase the risk of developing certain health issues.
+
+//                 A vitamin is an organic compound, which means that it contains carbon. It is also an essential nutrient that the body may need to get from food.
+
+//                 There are currently 13 recognized vitamins.
+
+
+
+//                 </p>
+//                 <div className="row py-20">
+//                   <div className="col-lg-3 col-sm-6">
+//                     <div className="about-feature-two style-two wow fadeInUp delay-0-2s">
+//                       <div className="icon">
+//                         <i className="flaticon-wheat-sack" />
+//                       </div>
+//                       <h4>
+//                         <a href="https://www.hsph.harvard.edu/nutritionsource/vitamin-a/"
+//                           target="_blank"
+//                         >
+//                           Vitamin A
+//                         </a>
+//                       </h4>
+//                     </div>
+//                   </div>
+//                   <div className="col-lg-3 col-sm-6">
+//                     <div className="about-feature-two style-two wow fadeInUp delay-0-3s">
+//                       <div className="icon">
+//                         <i className="flaticon-fruits" />
+//                       </div>
+//                       <h4>
+                        
+//                           <a href="https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/#:~:text=Vitamin%20D%20(also%20referred%20to,and%20trigger%20vitamin%20D%20synthesis."
+//                             target="_blank"
+//                           >
+//                             {" "}
+//                             Vitamin D
+//                           </a>
+                        
+//                       </h4>
+//                     </div>
+//                   </div>
+//                   <div className="col-lg-3 col-sm-6">
+//                     <div className="about-feature-two style-two wow fadeInUp delay-0-4s">
+//                       <div className="icon">
+//                         <i className="flaticon-eggs-1" />
+//                       </div>
+//                       <h4>
+                        
+//                           <a href="https://www.hsph.harvard.edu/nutritionsource/vitamin-e/#:~:text=Vitamin%20E%20is%20a%20fat,%E2%80%9D%E2%80%94that%20can%20damage%20cells."
+//                             target="_blank"
+//                           >
+//                             {" "}
+//                             Vitamin E
+//                           </a>
+                        
+//                       </h4>
+//                     </div>
+//                   </div>
+//                   <div className="col-lg-3 col-sm-6">
+//                     <div className="about-feature-two style-two wow fadeInUp delay-0-5s">
+//                       <div className="icon">
+//                         <i className="flaticon-return-box" />
+//                       </div>
+//                       <h4>
+                        
+//                           <a href="https://www.hsph.harvard.edu/nutritionsource/vitamin-k/"
+//                             target="_blank"
+//                           >
+//                             {" "}
+//                             Vitamin K
+//                           </a>
+                        
+//                       </h4>
+//                     </div>
+//                   </div>
+//                 </div>
+//                 <div className="container mt-5">
+//                 <div className="row">
+//                   <div className="col-md-12">
+//                     <h2 className="mb-4">Healthy Foods to Fulfill Vitamin Deficiencies</h2>
+//                     <p>
+//                       Explore a variety of nutrient-rich foods that can help fulfill vitamin deficiencies and promote overall well-being.
+//                     </p>
+//                   </div>
+//                 </div>
+
+//                 <div className="row mt-4">
+//                   <div className="col-md-4 mb-4">
+//                     <div className="card">
+//                       <img
+//                         src="https://www.maxirich.com/blogs/wp-content/uploads/2022/04/Blog_721apr2022.jpg"
+//                         alt="Vitamin C Rich Food"
+//                         className="card-img-top"
+//                       />
+//                       <div className="card-body">
+//                         <h5 className="card-title">Citrus Fruits</h5>
+//                         <p className="card-text">
+//                           Citrus fruits like oranges, lemons, and grapefruits are rich in vitamin C, which supports immune health.
+//                         </p>
+//                       </div>
+//                     </div>
+//                   </div>
+
+//                   <div className="col-md-4 mb-4">
+//                     <div className="card">
+//                       <img
+//                         src="https://img.paisawapas.com/ovz3vew9pw/2022/11/02113841/Untitled-1.jpg"
+//                         alt="Vitamin D Rich Food"
+//                         className="card-img-top"
+//                       />
+//                       <div className="card-body">
+//                         <h5 className="card-title">Fatty Fish</h5>
+//                         <p className="card-text">
+//                           Fatty fish such as salmon and mackerel are excellent sources of vitamin D, crucial for bone health.
+//                         </p>
+//                       </div>
+//                     </div>
+//                   </div>
+
+//                   <div className="col-md-4 mb-4">
+//                     <div className="card">
+//                       <img
+//                         src="https://imgeng.jagran.com/images/2023/may/foods-rich-in-votamin-a1684215141670.jpg"
+//                         alt="Vitamin A Rich Food"
+//                         className="card-img-top"
+//                       />
+//                       <div className="card-body">
+//                         <h5 className="card-title">Carrots</h5>
+//                         <p className="card-text">
+//                           Carrots are packed with beta-carotene, a precursor to vitamin A, important for vision and skin health.
+//                         </p>
+//                       </div>
+//                     </div>
+//                   </div>
+//                 </div>
+//               </div>
+
+          
+
+
+//               </div>
+//             </div>
+//             <div className="col-xl-4 col-lg-6 col-md-8">
+//               <div className="service-sidebar mt-65">
+//                 <div className="widget widget-search wow fadeInUp delay-0-2s">
+//                   <form onSubmit={(e) => e.preventDefault()} action="#">
+//                     <input
+//                       type="text"
+//                       placeholder="Service Category"
+//                       required=""
+//                     />
+//                     <button
+//                       type="submit"
+//                       className="searchbutton fa fa-search"
+//                     />
+//                   </form>
+//                 </div>
+                
+//                 <div className="widget widget-cta wow fadeInUp delay-0-2s">
+//                   <div className="cta-widget-content text-white">
+//                     <span className="sub-title my-10">Contact Us</span>
+//                     <h2>Need any Helps</h2>
+//                     <img src="assets/images/shapes/wave-white.png" alt="Wave" />
+//                     <br />
+//                     <Link href="/contact">
+//                       <a className="theme-btn style-three bg-white mt-30">
+//                         Contact Us <i className="fas fa-angle-double-right" />
+//                       </a>
+//                     </Link>
+//                     <img
+//                       className="bg"
+//                       src="assets/images/widgets/cta-widget.png"
+//                       alt="Flower"
+//                     />
+//                   </div>
+//                 </div>
+//                 {/* <div className="widget widget-btns wow fadeInUp delay-0-2s">
+//                   <h4 className="widget-title">Download Now</h4>
+//                   <Link href="/contact">
+//                     <a className="theme-btn mb-10">
+//                       Download Pdf <i className="far fa-file-pdf" />
+//                     </a>
+//                   </Link>
+//                   <Link href="/contact">
+//                     <a className="theme-btn style-two">
+//                       Download Doc <i className="far fa-file-word" />
+//                     </a>
+//                   </Link>
+//                 </div> */}
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
