@@ -13,7 +13,8 @@ import HorizontalBars from "../src/components/BarChart";
 
 import RecipeoftheDay from "../src/components/RecipeoftheDay";
 import { categorydata } from "../src/data/categorydata";
-
+import { useEffect, useState } from "react";
+import axios from "axios";
 const MunfimCountdown = dynamic(
   () => import("../src/components/MunfimCountdown"),
   {
@@ -21,6 +22,29 @@ const MunfimCountdown = dynamic(
   }
 );
 const Index = () => {
+  const [data, setData] = useState([]);
+  const [image, setImage] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://apis-new.foodoscope.com/recipe-search/regions?searchText=Indian%20Subcontinent&pageSize=4",
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization:
+                "Bearer 5gtCRn6CMFkrTs6p2RSyfUcuD_-lSfTznLlnxSxdSZgsDnZk",
+            },
+          }
+        );
+        setData(response?.data?.payload?.data); 
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
+  console.log(data);
   return (
     <Layout header={1}>
       {/*End Hidden Sidebar */}
@@ -83,116 +107,6 @@ const Index = () => {
       {/* Category Section End */}
       {/* About Section Start */}
       <RecipeoftheDay/>
-      {/* <section className="about-section pt-85 rpt-55 pb-130 rpb-100">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
-              <div className="about-images wow fadeInLeft delay-0-2s">
-                <div className="row align-items-center">
-                  <div className="col-6">
-                    <img src="assets/images/about/about1.jpg" alt="About" />
-                  </div>
-                  <div className="col-6">
-                    <img src="assets/images/about/about2.jpg" alt="About" />
-                    <img src="assets/images/about/about3.jpg" alt="About" />
-                  </div>
-                </div>
-                <div className="offer">
-                  <img src="assets/images/shapes/organic.png" alt="Offer" />
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="about-content rpt-65 wow fadeInRight delay-0-2s">
-                <div className="section-title mb-35">
-                  <span className="sub-title mb-20">About Company</span>
-                  <h2>Organic &amp; Helathy Foods Provider Farming</h2>
-                </div>
-                <Tab.Container defaultActiveKey={"agriculture"}>
-                  <Nav className="nav jusctify-content-between">
-                    <li>
-                      <Nav.Link
-                        eventKey="agriculture"
-                        className="nav-link"
-                        data-toggle="tab"
-                        href="#agriculture"
-                      >
-                        <i className="flaticon-spa" />
-                        <h4>
-                          Agriculture
-                          <br />
-                          &amp; Foods
-                        </h4>
-                      </Nav.Link>
-                    </li>
-                    <li>
-                      <Nav.Link
-                        eventKey="vegetables"
-                        className="nav-link"
-                        data-toggle="tab"
-                        href="#vegetables"
-                      >
-                        <i className="flaticon-spa" />
-                        <h4>
-                          Vegetables
-                          <br />
-                          &amp; Fruits
-                        </h4>
-                      </Nav.Link>
-                    </li>
-                  </Nav>
-                  <Tab.Content className="tab-content pt-25">
-                    <Tab.Pane className="tab-pane fade" eventKey="agriculture">
-                      <p>
-                        On the other hand we denounce with righteous indignation
-                        and dislike men who are beguiled and demoralized by the
-                        charms of pleasure of the moment so blinded by desire,
-                        that they cannot foresee the pain
-                      </p>
-                      <div className="author-wrap">
-                        <img
-                          src="assets/images/about/author.jpg"
-                          alt="Authro"
-                        />
-                        <div className="title">
-                          <h4>Michael D. Foreman</h4>
-                          <span>CEO &amp; Founder</span>
-                        </div>
-                        <img
-                          src="assets/images/about/signature.png"
-                          alt="Signature"
-                        />
-                      </div>
-                    </Tab.Pane>
-                    <Tab.Pane className="tab-pane fade" eventKey="vegetables">
-                      <p>
-                        Charms of pleasure of the moment so blinded by desire,
-                        that they cannot foresee the pain On the other hand we
-                        denounce with righteous indignation and dislike men who
-                        are beguiled and demoralized by the
-                      </p>
-                      <div className="author-wrap">
-                        <img
-                          src="assets/images/about/author.jpg"
-                          alt="Authro"
-                        />
-                        <div className="title">
-                          <h4>Russell J. Knoll</h4>
-                          <span>CEO &amp; Founder</span>
-                        </div>
-                        <img
-                          src="assets/images/about/signature.png"
-                          alt="Signature"
-                        />
-                      </div>
-                    </Tab.Pane>
-                  </Tab.Content>
-                </Tab.Container>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
       {/* About Section End */}
       {/* Offer Banners Start */}
       <section className="offer-banners-area">
@@ -273,195 +187,16 @@ const Index = () => {
           </div>
         </div>
       </section>
-      {/* Offer Banners End */}
-      {/* Product Section Start */}
-      {/* <section className="product-section pt-100 rpt-70 pb-130 rpb-100">
-        <div className="container-fluid">
-          <div className="section-title text-center mb-60">
-            <span className="sub-title mb-20">
-              Popular Foods and Vegetables
-            </span>
-            <h2>Quality Fruits &amp; Vegetables</h2>
-          </div>
-          <Slider {...productActive} className="product-active">
-            <div className="product-item wow fadeInUp delay-0-2s">
-              <span className="offer">53 Off</span>
-              <div className="image">
-                <img src="assets/images/products/product1.png" alt="Product" />
-              </div>
-              <div className="content">
-                <div className="ratting">
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                </div>
-                <h5>
-                  <Link href="/product-details">Organic Brocolli</Link>
-                </h5>
-                <span className="price">
-                  <del>25</del>
-                  <span>18</span>
-                </span>
-              </div>
-            </div>
-            <div className="product-item wow fadeInUp delay-0-3s">
-              <div className="image">
-                <img src="assets/images/products/product2.png" alt="Product" />
-              </div>
-              <div className="content">
-                <div className="ratting">
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                </div>
-                <h5>
-                  <Link href="/product-details">Fresh Carrots</Link>
-                </h5>
-                <span className="price">
-                  <span>49.58</span>
-                </span>
-              </div>
-            </div>
-            <div className="product-item wow fadeInUp delay-0-4s">
-              <span className="offer bg-red">sale</span>
-              <div className="image">
-                <img src="assets/images/products/product3.png" alt="Product" />
-              </div>
-              <div className="content">
-                <div className="ratting">
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                </div>
-                <h5>
-                  <Link href="/product-details">Organic Brocolli</Link>
-                </h5>
-                <span className="price">
-                  <del>25</del>
-                  <span>18</span>
-                </span>
-              </div>
-            </div>
-            <div className="product-item wow fadeInUp delay-0-5s">
-              <span className="offer">20 Off</span>
-              <div className="image">
-                <img src="assets/images/products/product4.png" alt="Product" />
-              </div>
-              <div className="content">
-                <div className="ratting">
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                </div>
-                <h5>
-                  <Link href="/product-details">Chiken Egg</Link>
-                </h5>
-                <span className="price">
-                  <del>55</del>
-                  <span>36</span>
-                </span>
-              </div>
-            </div>
-            <div className="product-item wow fadeInUp delay-0-6s">
-              <div className="image">
-                <img src="assets/images/products/product5.png" alt="Product" />
-              </div>
-              <div className="content">
-                <div className="ratting">
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                </div>
-                <h5>
-                  <Link href="/product-details">Fresh Gooseberry</Link>
-                </h5>
-                <span className="price">
-                  <span>205</span>
-                </span>
-              </div>
-            </div>
-            <div className="product-item wow fadeInUp delay-0-7s">
-              <span className="offer">53 Off</span>
-              <div className="image">
-                <img src="assets/images/products/product6.png" alt="Product" />
-              </div>
-              <div className="content">
-                <div className="ratting">
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                </div>
-                <h5>
-                  <Link href="/product-details">Fresh Croissants</Link>
-                </h5>
-                <span className="price">
-                  <del>25</del>
-                  <span>18</span>
-                </span>
-              </div>
-            </div>
-            <div className="product-item wow fadeInUp delay-0-8s">
-              <span className="offer">25 Off</span>
-              <div className="image">
-                <img src="assets/images/products/product7.png" alt="Product" />
-              </div>
-              <div className="content">
-                <div className="ratting">
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                </div>
-                <h5>
-                  <Link href="/product-details">Chiken Egg’s</Link>
-                </h5>
-                <span className="price">
-                  <del>25</del>
-                  <span>18</span>
-                </span>
-              </div>
-            </div>
-          </Slider>
-        </div>
-      </section> */}
-      {/* Product Section End */}
       {/* Special Offer Start */}
-      <section className="special-offer bg-lighter pb-80">
+       <section className="special-offer bg-lighter pb-80">
         <div className="special-offer-content text-center py-130 rpy-100 wow fadeInUp delay-0-2s">
           <div className="section-title mb-30">
-            <span className="sub-title mb-20">35% Off for Fruits</span>
-            <h2>Special Deal Of This Week</h2>
+            <span className="sub-title mb-20">Based On Your Location</span>
+            <h2>Some of The Best Recipes To Try Out</h2>
           </div>
           <p>
-            On the other hand we denounce with righteous indignation and dislike
-            men who are beguiled and demoralized by the charms
+            Here are some of the best recipes that you can try out based on your location. These recipes are sure to please your palate without overwhelming your kitchen.
           </p>
-          {/* <MunfimCountdown /> */}
-          <div className="count-down-btns mt-10">
-            <Link href="/shop-grid">
-              <a className="theme-btn">
-                Shop Now <i className="fas fa-angle-double-right" />
-              </a>
-            </Link>
-            <Link href="/about">
-              <a className="theme-btn style-two">
-                use code <i className="fas fa-angle-double-right" />
-              </a>
-            </Link>
-          </div>
         </div>
         <img
           className="offer-bg"
@@ -480,15 +215,16 @@ const Index = () => {
         />
         <img
           className="special-offer-left"
-          src="assets/images/offers/offer-left.png"
+          src={data[0]?.img_url}
           alt="Offer"
         />
         <img
           className="special-offer-right"
-          src="assets/images/offers/offer-right.png"
+          src={data[1]?.img_url}  
           alt="Offer"
         />
       </section>
+      
       {/* Special Offer End */}
       {/* Call To Action Area Start */}
       <section className="cta-area">
@@ -553,152 +289,6 @@ const Index = () => {
         </div>
       </section>
       {/* Feedback Section End */}
-      {/* News Section Start */}
-      {/* <section className="news-section pt-130 rpt-100 pb-70 rpb-40">
-        <div className="container">
-          <div className="section-title text-center mb-60">
-            <span className="sub-title mb-20">Read Article Tips</span>
-            <h2>Latest News &amp; Blog</h2>
-          </div>
-          <div className="row justify-content-center">
-            <div className="col-xl-4 col-md-6">
-              <div className="news-item wow fadeInUp delay-0-2s">
-                <div className="image">
-                  <img src="assets/images/news/news1.jpg" alt="News" />
-                  <span className="date">
-                    <b>25</b> July
-                  </span>
-                </div>
-                <div className="content">
-                  <span className="sub-title">Vegetable</span>
-                  <h4>
-                    <Link href="/blog-details">
-                      Unicode UTF8 Character Sets They Sltimate Guide Systems
-                    </Link>
-                  </h4>
-                  <Link href="/blog-details">
-                    <a className="read-more">
-                      Read More <i className="fas fa-angle-double-right" />
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-4 col-md-6">
-              <div className="news-item wow fadeInUp delay-0-4s">
-                <div className="image">
-                  <img src="assets/images/news/news2.jpg" alt="News" />
-                  <span className="date">
-                    <b>25</b> July
-                  </span>
-                </div>
-                <div className="content">
-                  <span className="sub-title">Farming</span>
-                  <h4>
-                    <Link href="/blog-details">
-                      Quality Foods Requirments For Every Human Body’s
-                    </Link>
-                  </h4>
-                  <Link href="/blog-details">
-                    <a className="read-more">
-                      Read More <i className="fas fa-angle-double-right" />
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-4 col-md-6">
-              <div className="news-item wow fadeInUp delay-0-6s">
-                <div className="image">
-                  <img src="assets/images/news/news3.jpg" alt="News" />
-                  <span className="date">
-                    <b>25</b> July
-                  </span>
-                </div>
-                <div className="content">
-                  <span className="sub-title">Organic Fruits</span>
-                  <h4>
-                    <Link href="/blog-details">
-                      Choose Awesome Vegetables For Your Daily Life Routine
-                    </Link>
-                  </h4>
-                  <Link href="/blog-details">
-                    <a className="read-more">
-                      Read More <i className="fas fa-angle-double-right" />
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="news-shapes">
-          <img
-            className="onion"
-            src="assets/images/shapes/onion.png"
-            alt="Onion"
-          />
-          <img
-            className="two-leaf"
-            src="assets/images/slider/two-lear.png"
-            alt="Leaf"
-          />
-          <img
-            className="half-leaf"
-            src="assets/images/slider/half-leaf.png"
-            alt="Leaf"
-          />
-          <img
-            className="leaf-two"
-            src="assets/images/shapes/leaf-three.png"
-            alt="Leaf"
-          />
-          <img
-            className="leaf-three"
-            src="assets/images/shapes/leaf-four.png"
-            alt="Leaf"
-          />
-        </div>
-      </section> */}
-      {/* News Section End */}
-      {/* Client Logo Section Start */}
-      {/* <div className="client-logo-section text-center bg-light-green py-60">
-        <div className="container">
-          <ClientLogoSlider />
-        </div>
-        <div className="client-logo-shapes">
-          <img
-            className="shape-one"
-            src="assets/images/shapes/cl-shape1.png"
-            alt="Shape"
-          />
-          <img
-            className="shape-two"
-            src="assets/images/shapes/cl-shape2.png"
-            alt="Shape"
-          />
-          <img
-            className="shape-three"
-            src="assets/images/shapes/cl-shape3.png"
-            alt="Shape"
-          />
-          <img
-            className="shape-four"
-            src="assets/images/shapes/cl-shape4.png"
-            alt="Shape"
-          />
-          <img
-            className="shape-five"
-            src="assets/images/shapes/cl-shape5.png"
-            alt="Shape"
-          />
-          <img
-            className="shape-six"
-            src="assets/images/shapes/cl-shape6.png"
-            alt="Shape"
-          />
-        </div>
-      </div> */}
     </Layout>
   );
 };
