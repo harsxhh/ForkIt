@@ -194,7 +194,7 @@ const About = () => {
       </section> */}
       {/* Team Area End */}
       {/* About Section Start */}
-      <section className="about-section-two rel z-1">
+      {/* <section className="about-section-two rel z-1">
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
@@ -270,7 +270,7 @@ const About = () => {
           <img src="assets/images/shapes/about-shape1.png" alt="Shape" />
           <img src="assets/images/shapes/about-shape2.png" alt="Shape" />
         </div>
-      </section>
+      </section> */}
       {/* About Section End */}
       {/* Feedback Section Start */}
       <section className="feedback-section pt-100 rpt-70 pb-130 rpb-100">
@@ -284,7 +284,7 @@ const About = () => {
       </section>
       {/* Feedback Section End */}
       {/* Client Logo Section Start */}
-      <div className="client-logo-section text-center bg-light-green py-60">
+      {/* <div className="client-logo-section text-center bg-light-green py-60">
         <div className="container">
           <ClientLogoSlider />
         </div>
@@ -320,7 +320,7 @@ const About = () => {
             alt="Shape"
           />
         </div>
-      </div>
+      </div> */}
     </Layout>
   );
 };

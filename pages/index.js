@@ -251,7 +251,7 @@ const Index = () => {
                 <div className="content">
                   <h4>Check Nutrients</h4>
                   <p>How much macros does your food have? </p>
-                  <Link href="/shop-grid">
+                  <Link href="/check-nutrients">
                     <a className="theme-btn style-two">
                       Check <i className="fas fa-angle-double-right" />
                     </a>
@@ -662,7 +662,7 @@ const Index = () => {
       </section>
       {/* News Section End */}
       {/* Client Logo Section Start */}
-      <div className="client-logo-section text-center bg-light-green py-60">
+      {/* <div className="client-logo-section text-center bg-light-green py-60">
         <div className="container">
           <ClientLogoSlider />
         </div>
@@ -698,7 +698,7 @@ const Index = () => {
             alt="Shape"
           />
         </div>
-      </div>
+      </div> */}
     </Layout>
   );
 };

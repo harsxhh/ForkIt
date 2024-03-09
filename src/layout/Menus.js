@@ -12,7 +12,7 @@ export const Home = () => (
 export const PagesDasktop = () => (
   <Fragment>
     <li>
-      <Link href="/about">About us</Link>
+      <Link href="/about">About</Link>
     </li>
   </Fragment>
 );
