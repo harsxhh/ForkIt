@@ -16,6 +16,7 @@ import RecipeoftheDay from "../src/components/RecipeoftheDay";
 import { categorydata } from "../src/data/categorydata";
 import { bannerdata } from "../src/data/bannerdata";
 import Banner from "../src/components/Banner";
+import Search from "./search-categories";
 const MunfimCountdown = dynamic(
   () => import("../src/components/MunfimCountdown"),
   {
@@ -74,7 +75,7 @@ const Index = () => {
                   <img src={item.url} alt="Icon" />
                 </div>
                 <h5>
-                  <Link href={`/search?category=${encodeURIComponent(item.title)}`}>{item.title}</Link>
+                  <Link href={`/search-categories?category=${encodeURIComponent(item.title)}`}>{item.title}</Link>
                 </h5>
                 <img src="assets/images/category/arrow.png" alt="Arrow" />
               </div>
@@ -144,7 +145,9 @@ const Index = () => {
                 <div className="content">
                   <h4>Check Nutrients</h4>
                   <p>How much macros does your food have? </p>
-                  <Link href="/search?recipe='rice'&region='Indian Subcontinent'&subRegion='India'&page=1">
+                  <Link
+                    href={`/search-recipe?searchText=rice&region=Indian%20Subcontinent&subRegion=Indian&page=1`}
+                  >
                     <a className="theme-btn style-two">
                       Check <i className="fas fa-angle-double-right" />
                     </a>

@@ -5,7 +5,7 @@ import RecipeModal from './RecipeModal';
 
 function Search() {
     const router = useRouter();
-    const {  query } = router;
+    const { query } = router;
     const { category } = query;
     const [recipes, setRecipes] = useState([]);
     const [selectedRecipe, setSelectedRecipe] = useState(null);
@@ -18,13 +18,13 @@ function Search() {
     }, [category]);
 
     const fetchData = async (category) => {
-        const apiUrl = `https://apis-new.foodoscope.com/recipe-search/categories?searchText=${category}&pageSize=20`;
+        const apiUrl = `https://apis-new.foodoscope.com/recipe-search/categories?searchText=${category}&region=Indian%20Subcontinent&subRegion=Indian&page=1&pageSize=20`;
         const apiKey = '5gtCRn6CMFkrTs6p2RSyfUcuD_-lSfTznLlnxSxdSZgsDnZk';
         try {
             const res = await axios.get(apiUrl, {
                 headers: {
                     'Authorization': `Bearer ${apiKey}`,
-                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
                 }
             });
             setRecipes(res.data.payload.data);
