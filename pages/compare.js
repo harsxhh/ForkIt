@@ -58,39 +58,53 @@ function Compare() {
           onChange={(e) => setSearchText(e.target.value)}
           style={{ marginRight: '10px' }}
         />
-        <button onClick={handleSearch}>
+        <button
+          disabled={!searchText}
+          onClick={handleSearch}
+          style={{
+          marginTop:"10px",
+          padding: '8px 16px',
+          backgroundColor: '#007bff',
+          color: '#fff',
+          border: 'none',
+          borderRadius: '4px',
+          cursor: 'pointer',
+        }}
+        >
           {loading ? 'Searching...' : 'Search'}
         </button>
       </div>
     );
   };
-
+  const maxCharacters = 50; 
+  const truncatedText = recipes1 && recipes1.Processes ? recipes1.Processes.substring(0, maxCharacters) : '';
+const isTruncated = recipes1 && recipes1.Processes && recipes1.Processes.length > maxCharacters;
   return (
     <Layout>
-    <div style={{ display: 'flex' }}>
-      <div style={{ flex: '1', padding: '20px', border: '1px solid #ccc', marginRight: '10px' }}>
+    <div  style={{ display: 'flex' }}>
+      <div  className='w-50' style={{ flex: '1', padding: '20px', border: '1px solid #ccc', marginRight: '10px' }}>
         <h2>Side 1</h2>
         {renderSearchBar(searchText1, setSearchText1, handleSearch1, loading1)}
-        <img src={recipes1.img_url} alt={recipes1['Recipe_title']} style={{ width: '250px',padding:"20px",height:"250px" }} />
-        <h4>Name: {recipes1.Recipe_title}</h4>
-        <h4>Calories: {parseFloat(recipes1['Calories'])} kCal</h4>
-        <h4>Continent/Region: {recipes1.Continent}</h4>
-        <h4>Sub-Region: {recipes1.Sub_region} </h4>
-        <h4>Processes: {recipes1.Processes}</h4>
-        <h4>Servings: {recipes1.servings}</h4>
-        <h4>Total Time: {recipes1.total_time} minutes</h4>
+        <img src={recipes1?.img_url} alt={recipes1['Recipe_title']} style={{ width: '250px',padding:"20px",height:"250px" }} />
+        <h4>Name:</h4> {recipes1?.Recipe_title}
+        <h4>Calories: </h4>{parseFloat(recipes1['Calories'])} kCal
+        <h4>Continent/Region: </h4>{recipes1?.Continent}
+        <h4>Sub-Region:</h4> {recipes1?.Sub_region} 
+        <h4>Processes:</h4> <div  style={{ overflowWrap: 'break-word' }}>{recipes1?.Processes}</div>
+        <h4>Servings:</h4> {recipes1?.servings}
+        <h4>Total Time: </h4>{recipes1?.total_time} minutes
       </div>
       <div style={{ flex: '1', padding: '20px', border: '1px solid #ccc' }}>
         <h2>Side 2</h2>
         {renderSearchBar(searchText2, setSearchText2, handleSearch2, loading2)}
-        <img src={recipes2.img_url} alt={recipes1['Recipe_title']} style={{ width: '250px',padding:"20px",height:"250px" }} />
-        <h4>Name: {recipes2.Recipe_title}</h4>
-        <h4>Calories: {parseFloat(recipes2['Calories'])} kCal</h4>
-        <h4>Continent/Region: {recipes2.Continent}</h4>
-        <h4>Sub-Region: {recipes2.Sub_region} </h4>
-        <h4>Processes: {recipes2.Processes}</h4>
-        <h4>Servings: {recipes2.servings}</h4>
-        <h4>Total Time: {recipes2.total_time} minutes</h4>
+        <img src={recipes2?.img_url} alt={recipes1['Recipe_title']} style={{ width: '250px',padding:"20px",height:"250px" }} />
+        <h4>Name:</h4> {recipes2?.Recipe_title}
+        <h4>Calories: </h4>{parseFloat(recipes2['Calories'])} kCal
+        <h4>Continent/Region:</h4> {recipes2?.Continent}
+        <h4>Sub-Region:</h4> {recipes2?.Sub_region} 
+        <h4>Processes:</h4> <div  style={{ overflowWrap: 'break-word' }}>{recipes2?.Processes}</div>
+        <h4>Servings:</h4> {recipes2?.servings}
+        <h4>Total Time: </h4>{recipes2?.total_time} minutes
       </div>
       {/* Display difference between recipes */}
     </div>
