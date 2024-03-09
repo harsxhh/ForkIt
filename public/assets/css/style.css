@@ -5068,11 +5068,11 @@ h1, h2, h3, h4, h5, h6, blockquote, .tag-coulds a {
     animation: down-up-one 8s infinite; }
   .special-offer .special-offer-left {
     left: 0;
-    bottom: 0;
+    bottom: 2rem;
     max-width: 35%; }
   .special-offer .special-offer-right {
     right: 0;
-    bottom: 0;
+    bottom: 2rem;
     max-width: 35%; }
 
 .special-offer-content {

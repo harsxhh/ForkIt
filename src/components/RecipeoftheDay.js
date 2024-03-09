@@ -9,7 +9,6 @@ const MunfimCountdown = dynamic(
         ssr: false,
     }
 );
-
 function RecipeoftheDay() {
     const [recipe, setRecipe] = React.useState({});
     React.useEffect(() => {
@@ -39,7 +38,7 @@ function RecipeoftheDay() {
             <div className="container">
                 <div className="section-title text-center mb-60">
                     <span className="sub-title mb-20">Recipe of the Day</span>
-                    <h2>{recipe.Recipe_title}</h2>
+                    <h2>{recipe?.Recipe_title}</h2>
                 </div>
                 <div className="row justify-content-between align-items-center">
                     <div className="col-xl-3 col-md-4">
@@ -51,7 +50,7 @@ function RecipeoftheDay() {
                                 <h4>
                                     <Link href="/service-details">Calories</Link>
                                 </h4>
-                                <p>{recipe.Calories} kCal</p>
+                                <p>{recipe?.Calories} kCal</p>
                             </div>
                             <div className="ww-provide-item">
                                 <div className="icon" style={{ width: "30%", height: "30%", textAlign: "right" }}>
@@ -60,14 +59,14 @@ function RecipeoftheDay() {
                                 <h4>
                                     <Link href="/service-details">Region</Link>
                                 </h4>
-                                <p>{recipe.Region} ({recipe.Sub_region})</p>
+                                <p>{recipe?.Region} ({recipe?.Sub_region})</p>
                             </div>
                         </div>
                     </div>
                     <div className="col-xl-5 col-md-4">
                         <div className="what-we-provide-images rmt-10 rmb-55 pr-0 wow fadeInUp delay-0-4s">
                             <img
-                                src={recipe.img_url}
+                                src={recipe?.img_url}
                                 alt="Service"
                                 style={{ borderRadius: "20px" }}
                             />
@@ -88,7 +87,7 @@ function RecipeoftheDay() {
                                 <h4>
                                     <Link href="/service-details">Servings</Link>
                                 </h4>
-                                <p>{recipe.servings} servings</p>
+                                <p>{recipe?.servings} servings</p>
                             </div>
                             <div className="ww-provide-item">
                                 <div className="icon" style={{ width: "30%", height: "30%" }}>
@@ -97,7 +96,7 @@ function RecipeoftheDay() {
                                 <h4>
                                     <Link href="/service-details">Prep Time</Link>
                                 </h4>
-                                <p>{recipe.total_time} minutes</p>
+                                <p>{recipe?.total_time} minutes</p>
                             </div>
                         </div>
                     </div>
