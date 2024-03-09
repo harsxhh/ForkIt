@@ -96,7 +96,7 @@ const Nav = () => {
         </button>
       </div>
       <div className={`navbar-collapse collapse clearfix ${nav ? "show" : ""}`}>
-        <DaskTopMenu />
+        <DaskTopMenu style={{ paddingLeft: "200px" }}/>
         <MobileMenu />
       </div>
     </nav>
@@ -124,31 +124,9 @@ const DefaultHeader = () => (
             </div>
           </div>
           <div className="nav-outer clearfix">
-            {/* Main Menu */}
             <Nav />
-            {/* Main Menu End*/}
           </div>
-          {/* Menu Button */}
           <div className="menu-icons">
-            {/* Nav Search */}
-            <div className="nav-search py-15">
-              <SearchBtn />
-            </div>
-            <button className="cart">
-              <i className="far fa-shopping-basket" />
-              <span>5</span>
-            </button>
-            <Link href="#">
-            <a className="user ml-4" >
-             <i className="far fa-user-circle" />
-            </a>
-            </Link>
-            <Link href="/contact">
-              <a className="theme-btn">
-                Consultations <i className="fas fa-angle-double-right" />
-              </a>
-            </Link>
-            {/* menu sidbar */}
             <div className="menu-sidebar" onClick={() => sidebarToggle()}>
               <button>
                 <i className="far fa-ellipsis-h" />
@@ -241,10 +219,10 @@ const Header1 = () => (
             <div className="nav-search py-15">
               <SearchBtn />
             </div>
-            <button className="cart">
+            {/* <button className="cart">
               <i className="far fa-shopping-basket" />
               <span>5</span>
-            </button>
+            </button> */}
             <button className="user">
               <i className="far fa-user-circle" />
             </button>
@@ -360,9 +338,9 @@ const Header2 = () => (
                 <button type="submit" className="searchbutton far fa-search" />
               </form>
             </div>
-            <button className="cart">
+            {/* <button className="cart">
               <i className="far fa-shopping-basket" />
-            </button>
+            </button> */}
             {/* menu sidbar */}
             <div className="menu-sidebar" onClick={() => sidebarToggle()}>
               <button>
@@ -443,10 +421,10 @@ const Header3 = () => (
               />
               <button type="submit" className="searchbutton far fa-search" />
             </form>
-            <button className="cart">
+            {/* <button className="cart">
               <i className="far fa-shopping-basket" />
               <span>5</span>
-            </button>
+            </button> */}
             <button className="user">
               <i className="far fa-user-circle" />
             </button>

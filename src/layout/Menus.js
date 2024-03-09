@@ -54,19 +54,13 @@ export const Portfolio = () => (
 export const Blog = () => (
   <Fragment>
     <li>
-      <Link href="/blog-grid">blog Grid</Link>
-    </li>
-    <li>
-      <Link href="/blog-standard">blog Standard</Link>
-    </li>
-    <li>
-      <Link href="/blog-details">blog details</Link>
+    <Link href="/blog-details">blog details</Link>
     </li>
   </Fragment>
 );
 export const Shop = () => (
   <Fragment>
-    <li>
+    {/* <li>
       <Link href="/shop-grid">shop Grid</Link>
     </li>
     <li>
@@ -74,16 +68,16 @@ export const Shop = () => (
     </li>
     <li>
       <Link href="/shop-right-sidebar">shop right sidebar</Link>
-    </li>
+    </li> */}
     <li>
       <Link href="/product-details">Product details</Link>
     </li>
     <li>
       <Link href="/cart">cart page</Link>
     </li>
-    <li>
+    {/* <li>
       <Link href="/checkout">checkout</Link>
-    </li>
+    </li> */}
     <li>
       <Link href="/wishlist">wishlist</Link>
     </li>

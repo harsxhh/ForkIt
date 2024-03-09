@@ -187,11 +187,11 @@ const About = () => {
       </section>
       {/* Gallery Area End */}
       {/* Team Area Start */}
-      <section className="team-area pt-50 rpt-20 pb-95 rpb-65">
+      {/* <section className="team-area pt-50 rpt-20 pb-95 rpb-65">
         <div className="container">
           <ExperienceTeam />
         </div>
-      </section>
+      </section> */}
       {/* Team Area End */}
       {/* About Section Start */}
       <section className="about-section-two rel z-1">

@@ -22,7 +22,7 @@ export default class ExperienceTeam extends Component {
       arrows: false,
       speed: 1000,
       focusOnSelect: false,
-      slidesToShow: 4,
+      slidesToShow: 3,
       slidesToScroll: 2,
       responsive: [
         {
@@ -76,7 +76,7 @@ export default class ExperienceTeam extends Component {
           ref={(c) => (this.slider = c)}
           className="team-active"
         >
-          <div className="team-member wow fadeInUp delay-0-2s">
+          {/* <div className="team-member wow fadeInUp delay-0-2s">
             <div className="image">
               <img src="assets/images/team/member1.jpg" alt="Team Member" />
               <div className="social-style-one">
@@ -101,8 +101,8 @@ export default class ExperienceTeam extends Component {
               src="assets/images/team/team-member-bg.png"
               alt="Bg"
             />
-          </div>
-          <div className="team-member wow fadeInUp delay-0-3s">
+          </div> */}
+          {/* <div className="team-member wow fadeInUp delay-0-3s">
             <div className="image">
               <img src="assets/images/team/member2.jpg" alt="Team Member" />
               <div className="social-style-one">
@@ -127,8 +127,8 @@ export default class ExperienceTeam extends Component {
               src="assets/images/team/team-member-bg.png"
               alt="Bg"
             />
-          </div>
-          <div className="team-member wow fadeInUp delay-0-4s">
+          </div> */}
+          {/* <div className="team-member wow fadeInUp delay-0-4s">
             <div className="image">
               <img src="assets/images/team/member3.jpg" alt="Team Member" />
               <div className="social-style-one">
@@ -153,8 +153,8 @@ export default class ExperienceTeam extends Component {
               src="assets/images/team/team-member-bg.png"
               alt="Bg"
             />
-          </div>
-          <div className="team-member wow fadeInUp delay-0-5s">
+          </div> */}
+          {/* <div className="team-member wow fadeInUp delay-0-5s">
             <div className="image">
               <img src="assets/images/team/member4.jpg" alt="Team Member" />
               <div className="social-style-one">
@@ -179,8 +179,8 @@ export default class ExperienceTeam extends Component {
               src="assets/images/team/team-member-bg.png"
               alt="Bg"
             />
-          </div>
-          <div className="team-member wow fadeInUp delay-0-6s">
+          </div> */}
+          {/* <div className="team-member wow fadeInUp delay-0-6s">
             <div className="image">
               <img src="assets/images/team/member1.jpg" alt="Team Member" />
               <div className="social-style-one">
@@ -205,7 +205,7 @@ export default class ExperienceTeam extends Component {
               src="assets/images/team/team-member-bg.png"
               alt="Bg"
             />
-          </div>
+          </div> */}
           <div className="team-member wow fadeInUp delay-0-7s">
             <div className="image">
               <img src="assets/images/team/member2.jpg" alt="Team Member" />

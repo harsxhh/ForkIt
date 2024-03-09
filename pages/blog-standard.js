@@ -234,7 +234,7 @@ const BlogStandard = () => {
                   </Link>
                 </div>
               </div>
-              <div className="news-standard-item wow fadeInUp delay-0-2s">
+              {/* <div className="news-standard-item wow fadeInUp delay-0-2s">
                 <div className="image">
                   <img src="assets/images/news/blog-standard8.jpg" alt="News" />
                 </div>
@@ -264,7 +264,7 @@ const BlogStandard = () => {
                     </a>
                   </Link>
                 </div>
-              </div>
+              </div> */}
               <ul className="pagination flex-wrap pt-10">
                 <Pagination
                   paginationCls={".news-standard-item"}
@@ -351,7 +351,7 @@ const BlogStandard = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="widget widget-news wow fadeInUp delay-0-2s">
+                {/* <div className="widget widget-news wow fadeInUp delay-0-2s">
                   <h4 className="widget-title">
                     <i className="flaticon-leaf-1" />
                     Recent News
@@ -406,7 +406,7 @@ const BlogStandard = () => {
                       </div>
                     </li>
                   </ul>
-                </div>
+                </div> */}
                 <div className="widget widget-tag-cloud wow fadeInUp delay-0-2s">
                   <h4 className="widget-title">
                     <i className="flaticon-leaf-1" />
