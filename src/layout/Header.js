@@ -37,7 +37,7 @@ const DaskTopMenu = () => (
     <PagesDasktop />
 
     <li className="dropdown">
-      <a href="/compare">compare</a>
+      <Link href="/compare">compare</Link>
     </li>
     <li className="dropdown">
       <a href="#">shop</a>
