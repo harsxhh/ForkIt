@@ -72,7 +72,7 @@ const Index = () => {
                   <img src={item.url} alt="Icon" />
                 </div>
                 <h5>
-                  <Link href={`/search?category=${encodeURIComponent(item.title)}`}>{item.title}</Link>
+                  <Link href={`/search-categories?category=${encodeURIComponent(item.title)}`}>{item.title}</Link>
                 </h5>
                 <img src="assets/images/category/arrow.png" alt="Arrow" />
               </div>

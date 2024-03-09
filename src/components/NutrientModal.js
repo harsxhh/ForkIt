@@ -1,7 +1,6 @@
 import React from 'react';
 
 function NutrientModal({ data, onClose }) {
-    // const id = recipe.id;
     console.log("Closd",onClose);
     return (
         <div className="modal" tabIndex="-1" role="dialog" style={{ display: "block", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>

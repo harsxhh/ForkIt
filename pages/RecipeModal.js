@@ -1,7 +1,7 @@
 import React from 'react';
 
 function RecipeModal({ recipe, onClose }) {
-    const id=recipe.id;
+    console.log(recipe);
     return (
         <div className="modal" tabIndex="-1" role="dialog" style={{ display: "block", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
             <div className="modal-dialog" role="document">
