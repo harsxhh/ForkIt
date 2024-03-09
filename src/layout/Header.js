@@ -8,7 +8,6 @@ const Header = ({ header }) => {
       return <DefaultHeader />;
   }
 export default Header;
-
 const SearchBtn = () => {
   const [toggle, setToggle] = useState(false);
 
@@ -33,26 +32,8 @@ const SearchBtn = () => {
 };
 const DaskTopMenu = () => (
   <ul className="navigation clearfix d-none d-lg-flex">
-    {/* <li className="dropdown">
-      <a href="#">Home</a>
-      <ul>
-        <Home />
-      </ul>
-      <div className="dropdown-btn">
-        <span className="fas fa-chevron-down" />
-      </div>
-    </li> */}
     <Home />
     <PagesDasktop />
-    {/* <li className="dropdown">
-      <a href="#">pages</a>
-      <ul>
-
-      </ul>
-      <div className="dropdown-btn">
-        <span className="fas fa-chevron-down" />
-      </div>
-    </li> */}
     <li className="dropdown">
       <a href="#">portfolio</a>
       <ul>
@@ -157,9 +138,11 @@ const DefaultHeader = () => (
               <i className="far fa-shopping-basket" />
               <span>5</span>
             </button>
-            <button className="user">
-              <i className="far fa-user-circle" />
-            </button>
+            <Link href="#">
+            <a className="user ml-4" >
+             <i className="far fa-user-circle" />
+            </a>
+            </Link>
             <Link href="/contact">
               <a className="theme-btn">
                 Consultations <i className="fas fa-angle-double-right" />

@@ -14,6 +14,7 @@
     "antd": "^5.15.1",
     "axios": "^1.6.7",
     "isotope-layout": "^3.0.6",
+    "mdb-react-ui-kit": "^7.2.0",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-bootstrap": "^1.6.1",
