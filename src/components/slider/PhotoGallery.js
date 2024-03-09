@@ -70,11 +70,11 @@ export default class PhotoGallery extends Component {
                   <h4>Organic Fruits</h4>
                   <p>Fresh Food</p>
                 </div>
-                <Link href="/portfolio-details">
+               
                   <a className="details-btn">
                     <i className="fas fa-arrow-right" />
                   </a>
-                </Link>
+               
               </div>
             </div>
             <div className="gallery-item big-item wow fadeInUp delay-0-4s">
@@ -84,11 +84,11 @@ export default class PhotoGallery extends Component {
                   <h4>Organic Fruits Juice</h4>
                   <p>Fresh Food &amp; Vegetable</p>
                 </div>
-                <Link href="/portfolio-details">
+                
                   <a className="details-btn">
                     <i className="fas fa-arrow-right" />
                   </a>
-                </Link>
+               
               </div>
             </div>
             <div className="gallery-item wow fadeInUp delay-0-6s">
@@ -98,11 +98,11 @@ export default class PhotoGallery extends Component {
                   <h4>Organic Fruits</h4>
                   <p>Vegetable</p>
                 </div>
-                <Link href="/portfolio-details">
+                
                   <a className="details-btn">
                     <i className="fas fa-arrow-right" />
                   </a>
-                </Link>
+                
               </div>
             </div>
             <div className="gallery-item wow fadeInUp delay-0-8s">
@@ -112,11 +112,11 @@ export default class PhotoGallery extends Component {
                   <h4>Organic Fruits</h4>
                   <p>Fresh Food</p>
                 </div>
-                <Link href="/portfolio-details">
+              
                   <a className="details-btn">
                     <i className="fas fa-arrow-right" />
                   </a>
-                </Link>
+                
               </div>
             </div>
           </Slider>

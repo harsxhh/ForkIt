@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
     <Fragment>
       <Head>
         <title>
-          Munfirm - Agriculture &amp; Organic Food React NextJS Template
+          VitaBite - Healthy Recipes | Personalized Diet Plans | Nutrition
         </title>
         {/* Favicon Icon */}
         <link

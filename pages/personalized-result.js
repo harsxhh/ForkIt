@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '../src/layout/Layout';
 import axios from 'axios';
-
+import Personalized1 from '../src/components/Personalized1';
+import Personalized2 from '../src/components/Personalized2';
+import Personalized3 from '../src/components/Personalized3';
 const PersonalizedResult = () => {
     const [ageGroup, setAgeGroup] = useState('');
     const [jobType, setJobType] = useState('');
     const [physicalActivity, setPhysicalActivity] = useState('');
     const [recipes, setRecipes] = useState([]);
-     // Define the recipes state variable
     const [recipes1, setRecipes1] = useState([]);   
     const [recipes2, setRecipes2] = useState([]);
    console.log(recipes);
@@ -30,11 +31,10 @@ const PersonalizedResult = () => {
             }
         };
     
-        if (ageGroup) { // Only fetch data if ageGroup state is truthy (i.e., not empty)
+        if (ageGroup) { 
             fetchData();
         }
-    }, [ageGroup]); // Dependency array includes ageGroup state
-     // Empty dependency array ensures the effect runs only once
+    }, [ageGroup]); 
      useEffect(() => {
         const fetchData = async () => {
             try {
@@ -161,16 +161,7 @@ const PersonalizedResult = () => {
                     <div className="row">
                         {recipes.map((recipe, index) => (
                             <div key={index} className="col-lg-4 col-md-6">
-                                <div className="recipe-card">
-                                    <img src={recipe.image} alt={recipe.title} />
-                                    <div className="recipe-details">
-                                        <h3>{recipe.title}</h3>
-                                        <p>Calories: {recipe?.Calories}</p>
-                                        <p>Energy: {recipe['Energy (kcal)']}</p>
-                                        <p>Cooking Time: {recipe?.cook_time}</p>
-                                        {/* Add other recipe details as needed */}
-                                    </div>
-                                </div>
+                                <Personalized1 item={recipe} index={index} />
                             </div>
                         ))}
                     </div>
@@ -181,16 +172,7 @@ const PersonalizedResult = () => {
                     <div className="row">
                         {recipes1.map((recipe, index) => (
                             <div key={index} className="col-lg-4 col-md-6">
-                                <div className="recipe-card">
-                                    <img src={recipe?.image} alt={recipe?.title} />
-                                    <div className="recipe-details">
-                                        <h3>{recipe?.title}</h3>
-                                        <p>Calories: {recipe?.Calories}</p>
-                                        <p>Energy: {recipe['Energy (kcal)']}</p>
-                                        <p>Cooking Time: {recipe?.cook_time}</p>
-                                        {/* Add other recipe details as needed */}
-                                    </div>
-                                </div>
+                                <Personalized2 item={recipe} index={index} />
                             </div>
                         ))}
                     </div>
@@ -201,16 +183,7 @@ const PersonalizedResult = () => {
                     <div className="row">
                         {recipes2.map((recipe, index) => (
                             <div key={index} className="col-lg-4 col-md-6">
-                                <div className="recipe-card">
-                                    <img src={recipe?.image} alt={recipe?.title} />
-                                    <div className="recipe-details">
-                                        <h3>{recipe.title}</h3>
-                                        <p>Calories: {recipe?.Calories}</p>
-                                        <p>Energy: {recipe['Energy (kcal)']}</p>
-                                        <p>Cooking Time: {recipe?.cook_time}</p>
-                                        {/* Add other recipe details as needed */}
-                                    </div>
-                                </div>
+                                <Personalized3 item={recipe} index={index} />
                             </div>
                         ))}
                     </div>

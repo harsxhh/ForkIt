@@ -70,16 +70,16 @@ export const Shop = () => (
       <Link href="/shop-right-sidebar">shop right sidebar</Link>
     </li> */}
     <li>
-      <Link href="/product-details">Product details</Link>
+      <Link href="">Product details</Link>
     </li>
     <li>
-      <Link href="/cart">cart page</Link>
+      <Link href="">cart page</Link>
     </li>
     {/* <li>
       <Link href="/checkout">checkout</Link>
     </li> */}
     <li>
-      <Link href="/wishlist">wishlist</Link>
+      <Link href="">wishlist</Link>
     </li>
   </Fragment>
 );

@@ -55,24 +55,24 @@ function Search() {
                 <div className="container">
                     <div className="section-title text-center mb-60">
                         <span className="sub-title mb-20">Use our varied filters &amp;</span>
-                        <h2>Search for your favourite recipe</h2>
+                        <h2>Here is your favourite recipe</h2>
                     </div>
                     <div className="row justify-content-between align-items-center">
                         <div className="col-xl-5 col-md-4">
                             <div className="what-we-provide-right">
-                                <form action="#" className="search-form">
+                                {/* <form action="#" className="search-form">
                                     <input type="text" placeholder="Enter dish name" />
                                     <button type="submit">
                                         <i className="flaticon-search"></i>
                                     </button>
-                                </form>
-                                <select onChange={handleFilterChange}>
+                                </form> */}
+                                {/* <select onChange={handleFilterChange}>
                                     <option value="">Select Filter</option>
                                     {/* Add filter options here */}
-                                    <option value="ingredient">Ingredient</option>
+                                    {/* <option value="ingredient">Ingredient</option>
                                     <option value="name">Recipe Name</option>
                                     <option value="category">Category</option>
-                                </select>
+                                </select> */} 
                                 {filters.map((filter) => (
                                     <div key={filter}>
                                         {filter}

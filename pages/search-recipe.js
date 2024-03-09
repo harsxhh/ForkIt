@@ -82,15 +82,15 @@ function Search() {
                                         <i className="flaticon-search"></i>
                                     </button>
                                 </form> */}
-                                <select onChange={handleFilterChange}>
+                                {/* <select onChange={handleFilterChange}>
                                     <option value="">Select Filter</option>
-                                    {/* Add filter options here */}
+                                    Add filter options here
                                     <option value="ingredient">Ingredient</option>
                                     <option value="name">Recipe Name</option>
                                     <option value="category">Category</option>
                                     <option value="utensils">Utensils</option>
                                     <option value="process">Process</option>
-                                </select>
+                                </select> */}
                                 <div className='mr-2rem'>{filters.map((filter) => (
                                     <div key={filter}>
                                         {filter}
