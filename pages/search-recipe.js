@@ -2,24 +2,42 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import axios from 'axios';
 import RecipeModal from './RecipeModal';
-
+import { func } from 'prop-types';
+import SingleCard3 from '../src/components/SingleCard3';
 function Search() {
     const router = useRouter();
+    const [data, setData] = useState();
     const { query } = router;
     const { category } = query;
     const [recipes, setRecipes] = useState([]);
     const [selectedRecipe, setSelectedRecipe] = useState(null);
     const [filters, setFilters] = useState([]);
-
+    const apiKey = '5gtCRn6CMFkrTs6p2RSyfUcuD_-lSfTznLlnxSxdSZgsDnZk';
+    const fetch= async () => {
+        const apiUrl = `https://apis-new.foodoscope.com/recipe-search/continents?searchText=Australasian&region=French&pageSize=14`;
+        try {
+            const res = await axios.get(apiUrl, {
+                headers: {
+                    'Authorization': `Bearer ${apiKey}`,
+                    'Content-Type': 'application/json',
+                }
+            });
+            setData(res.data.payload.data);
+        } catch (error) {
+            console.error('Error fetching recipe:', error);
+        }
+    };
+    useEffect(() => {
+        fetch();
+    }, []);
     useEffect(() => {
         if (category) {
             fetchData(category);
         }
     }, [category]);
-
+    
     const fetchData = async (category) => {
         const apiUrl = `https://apis-new.foodoscope.com/recipe-search/recipe?${category}&pageSize=20`;
-        const apiKey = '5gtCRn6CMFkrTs6p2RSyfUcuD_-lSfTznLlnxSxdSZgsDnZk';
         try {
             const res = await axios.get(apiUrl, {
                 headers: {
@@ -47,7 +65,6 @@ function Search() {
     const handleRemoveFilter = (filter) => {
         setFilters(filters.filter((f) => f !== filter));
     };
-
     return (
         <div>
             <section className="what-we-provide-two rel z-1 pt-65 rpt-100 pb-115 rpb-55">
@@ -59,25 +76,27 @@ function Search() {
                     <div className="row justify-content-between align-items-center">
                         <div className="col-xl-5 col-md-4">
                             <div className="what-we-provide-right">
-                                <form action="#" className="search-form">
+                                {/* <form action="#" className="search-form">
                                     <input type="text" placeholder="Enter dish name" />
                                     <button type="submit">
                                         <i className="flaticon-search"></i>
                                     </button>
-                                </form>
+                                </form> */}
                                 <select onChange={handleFilterChange}>
                                     <option value="">Select Filter</option>
                                     {/* Add filter options here */}
                                     <option value="ingredient">Ingredient</option>
                                     <option value="name">Recipe Name</option>
                                     <option value="category">Category</option>
+                                    <option value="utensils">Utensils</option>
+                                    <option value="process">Process</option>
                                 </select>
-                                {filters.map((filter) => (
+                                <div className='mr-2rem'>{filters.map((filter) => (
                                     <div key={filter}>
                                         {filter}
                                         <button onClick={() => handleRemoveFilter(filter)}>Remove</button>
                                     </div>
-                                ))}
+                                ))}</div>
                             </div>
                         </div>
                     </div>
@@ -104,6 +123,13 @@ function Search() {
                     {selectedRecipe && <RecipeModal recipe={selectedRecipe} onClose={() => setSelectedRecipe(null)} />}
                 </div>
             </section>
+            <div className="row m-4 mt-8 flex pt-20">
+            {data?.map((recipe, index) => {
+                return (
+                    <SingleCard3 item={recipe} index={index} />
+                )
+            })}
+            </div>
         </div>
     );
 }
