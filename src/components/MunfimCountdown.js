@@ -10,9 +10,6 @@ const MunfimCountdown = () => {
   return (
     <ul className="count-down mt-35">
       <li>
-        <span id="days">{days > 9 ? days : `0${days}`}</span>days
-      </li>
-      <li>
         <span id="hours">{hours > 9 ? hours : `0${hours}`}</span>Hours
       </li>
       <li>

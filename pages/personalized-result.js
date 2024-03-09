@@ -29,23 +29,24 @@ const PersonalizedResult = () => {
                             <div className="feature-item wow fadeInUp delay-0-2s">
                                 <div className="content">
                                     <span className="number">01</span>
-                                    <div className="image">
+                                    <div className="image" style={{ width: "300px" }}>
                                         <img
-                                            src="assets/images/features/feature1.png"
+                                            src="assets/images/services/age_group.png"
                                             alt="Feature"
                                         />
                                     </div>
                                     <h4>Age Group</h4>
-                                    <p>{ageGroup}</p>
+                                    <div className="dropdown">
+                                        <select onChange={(e) => handleAgeGroupChange(e.target.value)}>
+                                            <option value="">Select Age Group</option>
+                                            <option value="Under 18">Under 18</option>
+                                            <option value="18-30">18-30</option>
+                                            <option value="30-50">30-50</option>
+                                            <option value="50-70">50-70</option>
+                                            <option value="70+">70+</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                {/* <div className="dropdown">
-                                    <select onChange={(e) => handleAgeGroupChange(e.target.value)}>
-                                        <option value="">Select Age Group</option>
-                                        <option value="18-30">18-30</option>
-                                        <option value="31-50">31-50</option>
-                                        <option value="51+">51+</option>
-                                    </select>
-                                </div> */}
                             </div>
                         </div>
                         <div className="col-xl-4 col-md-6">
@@ -54,21 +55,22 @@ const PersonalizedResult = () => {
                                     <span className="number">02</span>
                                     <div className="image">
                                         <img
-                                            src="assets/images/features/feature2.png"
+                                            src="assets/images/services/job.png"
                                             alt="Feature"
+                                            style={{ width: "250px" }}
                                         />
                                     </div>
-                                    {/* <h4>What type of Job?</h4>
-                                    <p>{jobType}</p> */}
+                                    <h4>What type of Job?</h4>
+                                    <p>{jobType}</p>
+                                    <div className="dropdown">
+                                        <select onChange={(e) => handleJobTypeChange(e.target.value)}>
+                                            <option value="">Select Job Type</option>
+                                            <option value="Office Job">Office Job</option>
+                                            <option value="Manual Labor">Manual Labor</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                {/* <div className="dropdown">
-                                    <select onChange={(e) => handleJobTypeChange(e.target.value)}>
-                                        <option value="">Select Job Type</option>
-                                        <option value="Office Job">Office Job</option>
-                                        <option value="Manual Labor">Manual Labor</option>
-                                        <option value="Other">Other</option>
-                                    </select>
-                                </div> */}
                             </div>
                         </div>
                         <div className="col-xl-4 col-md-6">
@@ -81,19 +83,19 @@ const PersonalizedResult = () => {
                                             alt="Feature"
                                         />
                                     </div>
-                                    {/* <h4>Physical Activity</h4>
-                                    <p>{physicalActivity}</p> */}
+                                    <h4>Physical Activity</h4>
+                                    <p>{physicalActivity}</p>
+                                    <div className="dropdown">
+                                        <select onChange={(e) => handlePhysicalActivityChange(e.target.value)}>
+                                            <option value="">Select Physical Activity</option>
+                                            <option value="Sedentary">Sedentary</option>
+                                            <option value="Lightly Active">Lightly Active</option>
+                                            <option value="Moderately Active">Moderately Active</option>
+                                            <option value="Very Active">Very Active</option>
+                                            <option value="Extra Active">Extra Active</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                {/* <div className="dropdown">
-                                    <select onChange={(e) => handlePhysicalActivityChange(e.target.value)}>
-                                        <option value="">Select Physical Activity</option>
-                                        <option value="Sedentary">Sedentary</option>
-                                        <option value="Lightly Active">Lightly Active</option>
-                                        <option value="Moderately Active">Moderately Active</option>
-                                        <option value="Very Active">Very Active</option>
-                                        <option value="Extra Active">Extra Active</option>
-                                    </select>
-                                </div> */}
                             </div>
                         </div>
                     </div>

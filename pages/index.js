@@ -82,7 +82,7 @@ const Index = () => {
       </section>
       {/* Category Section End */}
       {/* About Section Start */}
-      {/* <RecipeoftheDay/> */}
+      <RecipeoftheDay/>
       {/* <section className="about-section pt-85 rpt-55 pb-130 rpb-100">
         <div className="container">
           <div className="row align-items-center">
@@ -449,7 +449,7 @@ const Index = () => {
             On the other hand we denounce with righteous indignation and dislike
             men who are beguiled and demoralized by the charms
           </p>
-          <MunfimCountdown />
+          {/* <MunfimCountdown /> */}
           <div className="count-down-btns mt-10">
             <Link href="/shop-grid">
               <a className="theme-btn">
