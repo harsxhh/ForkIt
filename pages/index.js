@@ -85,7 +85,7 @@ const Index = () => {
       </section>
       {/* Category Section End */}
       {/* About Section Start */}
-      {/* <RecipeoftheDay/> */}
+      <RecipeoftheDay/>
       {/* About Section End */}
       {/* Offer Banners Start */}
 
