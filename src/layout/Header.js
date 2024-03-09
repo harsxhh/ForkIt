@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Fragment, useState } from "react";
 import { sidebarToggle } from "../utils";
-import { Blog, Contact, Home, PagesDasktop, Portfolio, Shop } from "./Menus";
+import { Blog, Contact, Home, PagesDasktop, Shop } from "./Menus";
 import MobileMenu from "./MobileMenu";
 
 const Header = ({ header }) => {
@@ -33,35 +33,9 @@ const SearchBtn = () => {
 };
 const DaskTopMenu = () => (
   <ul className="navigation clearfix d-none d-lg-flex">
-    {/* <li className="dropdown">
-      <a href="#">Home</a>
-      <ul>
-        <Home />
-      </ul>
-      <div className="dropdown-btn">
-        <span className="fas fa-chevron-down" />
-      </div>
-    </li> */}
     <Home />
     <PagesDasktop />
-    {/* <li className="dropdown">
-      <a href="#">pages</a>
-      <ul>
 
-      </ul>
-      <div className="dropdown-btn">
-        <span className="fas fa-chevron-down" />
-      </div>
-    </li> */}
-    <li className="dropdown">
-      <a href="#">portfolio</a>
-      <ul>
-        <Portfolio />
-      </ul>
-      <div className="dropdown-btn">
-        <span className="fas fa-chevron-down" />
-      </div>
-    </li>
     <li className="dropdown">
       <a href="#">blog</a>
       <ul>
@@ -115,7 +89,7 @@ const Nav = () => {
         </button>
       </div>
       <div className={`navbar-collapse collapse clearfix ${nav ? "show" : ""}`}>
-        <DaskTopMenu style={{ paddingLeft: "200px" }}/>
+        <DaskTopMenu />
         <MobileMenu />
       </div>
     </nav>
@@ -134,6 +108,7 @@ const DefaultHeader = () => (
               <Link href="/">
                 <a>
                   <img
+                    className="logo-img56"
                     src="assets/images/logos/logo.png"
                     alt="Logo"
                     title="Logo"
@@ -150,10 +125,21 @@ const DefaultHeader = () => (
           {/* Menu Button */}
           <div className="menu-icons">
             {/* Nav Search */}
+            <div className="nav-search py-15">
+              <SearchBtn />
+            </div>
             {/* <button className="cart">
               <i className="far fa-shopping-basket" />
               <span>5</span>
             </button> */}
+            <button className="user">
+              <i className="far fa-user-circle" />
+            </button>
+            <Link href="/contact">
+              <a className="theme-btn">
+                Consultations <i className="fas fa-angle-double-right" />
+              </a>
+            </Link>
             {/* menu sidbar */}
             <div className="menu-sidebar" onClick={() => sidebarToggle()}>
               <button>

@@ -247,7 +247,7 @@ const Footer3 = () => (
                   <Link href="/">
                     <a>
                       <img
-                        src="assets/images/logos/logo-two-white.png"
+                        src="assets/images/logos/logo-two-white.svg"
                         alt="Logo"
                       />
                     </a>

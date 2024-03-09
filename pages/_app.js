@@ -1,6 +1,5 @@
 import { Fragment } from "react";
 import "../styles/globals.css";
-
 import Head from "next/head";
 import "react-circular-progressbar/dist/styles.css";
 function MyApp({ Component, pageProps }) {
