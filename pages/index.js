@@ -33,7 +33,7 @@ const Index = () => {
             headers: {
               "Content-Type": "application/json",
               Authorization:
-                "Bearer 5gtCRn6CMFkrTs6p2RSyfUcuD_-lSfTznLlnxSxdSZgsDnZk",
+                "Bearer zO1dFVx7FYJl1cwctH1Tpf5jIsY3fEHR4_4PQiBzKFGtZjjJ",
             },
           }
         );

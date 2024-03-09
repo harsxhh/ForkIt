@@ -12,7 +12,7 @@ function Search() {
     const [recipes, setRecipes] = useState([]);
     const [selectedRecipe, setSelectedRecipe] = useState(null);
     const [filters, setFilters] = useState([]);
-    const apiKey = '5gtCRn6CMFkrTs6p2RSyfUcuD_-lSfTznLlnxSxdSZgsDnZk';
+    const apiKey = 'zO1dFVx7FYJl1cwctH1Tpf5jIsY3fEHR4_4PQiBzKFGtZjjJ';
     const fetch= async () => {
         const apiUrl = `https://apis-new.foodoscope.com/recipe-search/continents?searchText=Australasian&region=French&pageSize=14`;
         try {

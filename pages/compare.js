@@ -12,7 +12,7 @@ function Compare() {
 
   const handleSearch1 = async () => {
     setLoading1(true);
-    const apiKey = '5gtCRn6CMFkrTs6p2RSyfUcuD_-lSfTznLlnxSxdSZgsDnZk';
+    const apiKey = 'zO1dFVx7FYJl1cwctH1Tpf5jIsY3fEHR4_4PQiBzKFGtZjjJ';
     try {
       const response = await axios.get(`https://apis-new.foodoscope.com/recipe-search/recipe?searchText=${searchText1}&page=1&pagesize=1`,{
         headers: {
@@ -31,7 +31,7 @@ function Compare() {
 
   const handleSearch2 = async () => {
     setLoading2(true);
-    const apiKey = '5gtCRn6CMFkrTs6p2RSyfUcuD_-lSfTznLlnxSxdSZgsDnZk';
+    const apiKey = 'zO1dFVx7FYJl1cwctH1Tpf5jIsY3fEHR4_4PQiBzKFGtZjjJ';
     try {
       const response = await axios.get(`https://apis-new.foodoscope.com/recipe-search/recipe?searchText=${searchText2}&page=1&pagesize=1`,{
         headers: {

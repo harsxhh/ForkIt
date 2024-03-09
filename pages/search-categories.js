@@ -19,7 +19,7 @@ function Search() {
 
     const fetchData = async (category) => {
         const apiUrl = `https://apis-new.foodoscope.com/recipe-search/categories?searchText=${category}&region=Indian%20Subcontinent&subRegion=Indian&page=1&pageSize=20`;
-        const apiKey = '5gtCRn6CMFkrTs6p2RSyfUcuD_-lSfTznLlnxSxdSZgsDnZk';
+        const apiKey = 'zO1dFVx7FYJl1cwctH1Tpf5jIsY3fEHR4_4PQiBzKFGtZjjJ';
         try {
             const res = await axios.get(apiUrl, {
                 headers: {

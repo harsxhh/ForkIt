@@ -135,7 +135,9 @@ header:after, section:after, footer:after {
   display: block;
   clear: both;
   content: ""; }
-
+.recipieleft{
+  margin-left: 6rem;
+}
 /*======= Input Styles =======*/
 input,
 select,

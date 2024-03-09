@@ -25,7 +25,7 @@ export const HomeSlider1 = () => {
                 <h1>Discover Delectable Recipes &amp; Flavors</h1>
                 <h6>Savor Every Bite with Our Easy-to-Follow Recipes</h6>
                 <div className="slider-btns mt-30">
-                  <Link href="/shop-grid">
+                  <Link href="/check-nutrients">
                     <a className="theme-btn style-two">
                       Cook Now <i className="fas fa-angle-double-right" />
                     </a>
@@ -99,7 +99,7 @@ export const HomeSlider1 = () => {
                 <h1>Recipes & Flavors Galore!</h1>
                 <h6>Explore a World of Culinary Delights</h6>
                 <div className="slider-btns mt-30">
-                  <Link href="/shop-grid">
+                  <Link href="/check-nutrients">
                     <a className="theme-btn style-two">
                       Cook Now <i className="fas fa-angle-double-right" />
                     </a>

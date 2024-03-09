@@ -19,7 +19,7 @@ const PersonalizedResult = () => {
                     energyMin: "500"
                 }, {
                     headers: {
-                        Authorization: "Bearer 5gtCRn6CMFkrTs6p2RSyfUcuD_-lSfTznLlnxSxdSZgsDnZk",
+                        Authorization: "Bearer zO1dFVx7FYJl1cwctH1Tpf5jIsY3fEHR4_4PQiBzKFGtZjjJ",
                         Accept: "application/json"
                     }
                 });
@@ -42,7 +42,7 @@ const PersonalizedResult = () => {
                     proteinMin: "80"
                 }, {
                     headers: {
-                        Authorization: "Bearer 5gtCRn6CMFkrTs6p2RSyfUcuD_-lSfTznLlnxSxdSZgsDnZk",
+                        Authorization: "Bearer zO1dFVx7FYJl1cwctH1Tpf5jIsY3fEHR4_4PQiBzKFGtZjjJ",
                         Accept: "application/json"
                     }
                 });
@@ -65,7 +65,7 @@ const PersonalizedResult = () => {
                     proteinMin: "80"
                 }, {
                     headers: {
-                        Authorization: "Bearer 5gtCRn6CMFkrTs6p2RSyfUcuD_-lSfTznLlnxSxdSZgsDnZk",
+                        Authorization: "Bearer zO1dFVx7FYJl1cwctH1Tpf5jIsY3fEHR4_4PQiBzKFGtZjjJ",
                         Accept: "application/json"
                     }
                 });

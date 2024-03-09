@@ -14,7 +14,7 @@ function RecipeoftheDay() {
     React.useEffect(() => {
         const fetchData = async () => {
             const apiUrl = 'https://apis-new.foodoscope.com/recipe/recipeOftheDay';
-            const apiKey = '5gtCRn6CMFkrTs6p2RSyfUcuD_-lSfTznLlnxSxdSZgsDnZk';
+            const apiKey = 'zO1dFVx7FYJl1cwctH1Tpf5jIsY3fEHR4_4PQiBzKFGtZjjJ';
 
             try {
                 const res = await axios.get(apiUrl, {
@@ -43,8 +43,8 @@ function RecipeoftheDay() {
                 <div className="row justify-content-between align-items-center">
                     <div className="col-xl-3 col-md-4">
                         <div className="what-we-provide-left wow fadeInUp delay-0-2s">
-                            <div className="ww-provide-item">
-                                <div className="icon" style={{ width: "30%", height: "30%" }}>
+                            <div className="ww-provide-item ">
+                                <div className="icon recipieleft" style={{ width: "30%", height: "30%" }}>
                                     <img src="assets/images/services/icon1.png" alt="Icon" />
                                 </div>
                                 <h4>
@@ -52,8 +52,8 @@ function RecipeoftheDay() {
                                 </h4>
                                 <p>{recipe?.Calories} kCal</p>
                             </div>
-                            <div className="ww-provide-item">
-                                <div className="icon" style={{ width: "30%", height: "30%", textAlign: "right" }}>
+                            <div className="ww-provide-item recipieleft">
+                                <div className="icon recipieleft" style={{ width: "30%", height: "30%", textAlign: "right" }}>
                                     <img src="assets/images/services/icon2.png" alt="Icon" style={{ marginLeft: "auto" }} />
                                 </div>
                                 <h4>
