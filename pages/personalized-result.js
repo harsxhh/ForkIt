@@ -38,14 +38,14 @@ const PersonalizedResult = () => {
                                     <h4>Age Group</h4>
                                     <p>{ageGroup}</p>
                                 </div>
-                                <div className="dropdown">
+                                {/* <div className="dropdown">
                                     <select onChange={(e) => handleAgeGroupChange(e.target.value)}>
                                         <option value="">Select Age Group</option>
                                         <option value="18-30">18-30</option>
                                         <option value="31-50">31-50</option>
                                         <option value="51+">51+</option>
                                     </select>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         <div className="col-xl-4 col-md-6">
@@ -58,17 +58,17 @@ const PersonalizedResult = () => {
                                             alt="Feature"
                                         />
                                     </div>
-                                    <h4>What type of Job?</h4>
-                                    <p>{jobType}</p>
+                                    {/* <h4>What type of Job?</h4>
+                                    <p>{jobType}</p> */}
                                 </div>
-                                <div className="dropdown">
+                                {/* <div className="dropdown">
                                     <select onChange={(e) => handleJobTypeChange(e.target.value)}>
                                         <option value="">Select Job Type</option>
                                         <option value="Office Job">Office Job</option>
                                         <option value="Manual Labor">Manual Labor</option>
                                         <option value="Other">Other</option>
                                     </select>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         <div className="col-xl-4 col-md-6">
@@ -81,10 +81,10 @@ const PersonalizedResult = () => {
                                             alt="Feature"
                                         />
                                     </div>
-                                    <h4>Physical Activity</h4>
-                                    <p>{physicalActivity}</p>
+                                    {/* <h4>Physical Activity</h4>
+                                    <p>{physicalActivity}</p> */}
                                 </div>
-                                <div className="dropdown">
+                                {/* <div className="dropdown">
                                     <select onChange={(e) => handlePhysicalActivityChange(e.target.value)}>
                                         <option value="">Select Physical Activity</option>
                                         <option value="Sedentary">Sedentary</option>
@@ -93,7 +93,7 @@ const PersonalizedResult = () => {
                                         <option value="Very Active">Very Active</option>
                                         <option value="Extra Active">Extra Active</option>
                                     </select>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>

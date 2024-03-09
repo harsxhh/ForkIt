@@ -32,11 +32,12 @@ function Search() {
             console.error('Error fetching recipe:', error);
         }
     };
+    
 
     const handleReadMore = (recipe) => {
         setSelectedRecipe(recipe); // Set the selected recipe when Read More is clicked
     };
-
+    console.log(selectedRecipe);
     const handleFilterChange = (event) => {
         const selectedFilter = event.target.value;
         if (!filters.includes(selectedFilter)) {
@@ -92,16 +93,15 @@ function Search() {
                                             <div>
                                                 <h5 className="card-title">{recipe?.generic_name}</h5>
                                             </div>
-                                            <div className="mt-4">
+                                            {/* <div className="mt-4">
                                                 <button className="btn btn-primary" onClick={() => handleReadMore(recipe)}>Read More</button>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>
                             )
                         ))}
                     </div>
-                    {selectedRecipe && <RecipeModal recipe={selectedRecipe} onClose={() => setSelectedRecipe(null)} />}
                 </div>
             </section>
         </div>

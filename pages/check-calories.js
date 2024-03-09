@@ -7,6 +7,27 @@ import axios from "axios";
 import SingleCard from "../src/components/SingleCard";
 const ShopGrid = () => {
   const [data, setData] = useState();
+  const [searchText, setSearchText] = useState("");
+  const [isData, setIsData] = useState(false);
+  const [searchResults, setSearchResults] = useState([]);
+  const handleSearch = async () => {
+    try {
+      const res = await axios.get(
+        `https://apis-new.foodoscope.com/recipe-search/recipe?searchText=${searchText}&page=1&pageSize=20`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization:
+              "Bearer 5gtCRn6CMFkrTs6p2RSyfUcuD_-lSfTznLlnxSxdSZgsDnZk",
+          },
+        }
+      );
+      setIsData(true);
+      setSearchResults(res.data.payload.data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -29,8 +50,10 @@ const ShopGrid = () => {
   }, []);
   console.log(data);
   const handleChange = (e) => {
-    console.log(e.target.value);
+    setSearchText(e.target.value);
+
   };
+  
   return (
     <Layout>
       <PageBanner pageName={"Do you want to check calories? Check here..."} />
@@ -42,14 +65,16 @@ const ShopGrid = () => {
             className="input-custom"
             placeholder="Search for your favourite recipe..."
           />
-          <button className="bg-blue-800 hover:bg-black-700 text-black font-bold py-2 px-4 ml-2 rounded">
+          <button className="bg-blue-800 hover:bg-black-700 text-black font-bold py-2 px-4 ml-2 rounded" onClick={handleSearch}>
             Search
           </button>
         </div>
         <div className="row m-4 mt-8 flex pt-20">
-        {data?.map((item,index)=>{
-          return (<SingleCard item={item} index={index}  />)
-        })}
+        {isData
+          ? searchResults?.map((item, index) => (
+              <SingleCard key={index} item={item} />
+            ))
+          : data?.map((item, index) => <SingleCard key={index} item={item} />)}
         </div>
       </section>
     </Layout>
