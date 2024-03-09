@@ -227,7 +227,7 @@ const Index = () => {
                 <div className="content">
                   <h4>What is best for you to Eat?</h4>
                   <p>Best Foods For Your Health</p>
-                  <Link href="/check-calories">
+                  <Link href="/personalized-result">
                     <a className="theme-btn style-two">
                       Search <i className="fas fa-angle-double-right" />
                     </a>

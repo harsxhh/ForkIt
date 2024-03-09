@@ -21,7 +21,7 @@ export const HomeSlider1 = () => {
           <div className="row align-items-center">
             <div className="col-lg-6">
               <div className="slider-content">
-                <div className="sub-title mb-20">Welcome to Munfirm</div>
+                <div className="sub-title mb-20">Welcome to VitaBite</div>
                 <h1>Discover Delectable Recipes &amp; Flavors</h1>
                 <h6>Savor Every Bite with Our Easy-to-Follow Recipes</h6>
                 <div className="slider-btns mt-30">

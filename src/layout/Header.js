@@ -37,13 +37,7 @@ const DaskTopMenu = () => (
     <PagesDasktop />
 
     <li className="dropdown">
-      <a href="#">blog</a>
-      <ul>
-        <Blog />
-      </ul>
-      <div className="dropdown-btn">
-        <span className="fas fa-chevron-down" />
-      </div>
+      <a href="/compare">compare</a>
     </li>
     <li className="dropdown">
       <a href="#">shop</a>
