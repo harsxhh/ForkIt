@@ -39,15 +39,6 @@ const DaskTopMenu = () => (
     <li className="dropdown">
       <Link href="/compare">compare</Link>
     </li>
-    <li className="dropdown">
-      <a href="#">shop</a>
-      <ul>
-        <Shop />
-      </ul>
-      <div className="dropdown-btn">
-        <span className="fas fa-chevron-down" />
-      </div>
-    </li>
     <Contact />
   </ul>
 );
